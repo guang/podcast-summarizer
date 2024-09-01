@@ -1,0 +1,1736 @@
+
+[00:00:00.000 --> 00:00:02.520]   And it's funny to watch people melt down over this.
+[00:00:02.520 --> 00:00:06.680]   I guess I had my AI midlife crisis just a little before they did.
+[00:00:06.680 --> 00:00:11.320]   I had mine about a year ago where I just had an existential crisis where it hit me hard.
+[00:00:11.320 --> 00:00:12.320]   I was stunned.
+[00:00:12.320 --> 00:00:17.760]   I was like reeling because I realized that many of the things that I thought that I kind
+[00:00:17.760 --> 00:00:22.320]   of like my value, my sense of self-worth, my identity was tied up in my ability to do
+[00:00:22.320 --> 00:00:27.720]   things like memorize long things or generate long things or whatever, it's all just BS
+[00:00:27.720 --> 00:00:28.720]   now.
+[00:00:28.720 --> 00:00:30.040]   I had to do it way better, right?
+[00:00:30.040 --> 00:00:31.720]   So like that was tough.
+[00:00:31.720 --> 00:00:34.480]   I think a lot of other people haven't gone through that yet.
+[00:00:34.480 --> 00:00:42.160]   So my blog really touched the nerve.
+[00:00:42.160 --> 00:00:44.280]   Welcome to the Software Misadventures podcast.
+[00:00:44.280 --> 00:00:47.480]   We are your hosts, Ronak and Guan.
+[00:00:47.480 --> 00:00:51.600]   As engineers, we are interested in not just the technologies, but the people and the stories
+[00:00:51.600 --> 00:00:52.900]   behind them.
+[00:00:52.900 --> 00:00:57.520]   So on this show, we try to scratch our own edge by sitting down with engineers, founders
+[00:00:57.520 --> 00:01:03.080]   and investors to chat about their path, lessons they have learned, and of course, the misadventures
+[00:01:03.080 --> 00:01:04.880]   along the way.
+[00:01:04.880 --> 00:01:11.280]   Awesome, Steve, you're very well known for your rants, the Google Plus rant, I think
+[00:01:11.280 --> 00:01:13.520]   being the most popular one.
+[00:01:13.520 --> 00:01:20.280]   And I will categorize it as very insightful and suitable for the chilly emoji for the
+[00:01:20.280 --> 00:01:21.780]   spiciness of it.
+[00:01:21.780 --> 00:01:28.520]   So me and Ronak, we also rant, but we do not have like the near, which we'll call it skill
+[00:01:28.520 --> 00:01:29.520]   level.
+[00:01:29.520 --> 00:01:32.160]   So maybe some pro tips to get us started.
+[00:01:32.160 --> 00:01:36.680]   Like what makes a really good rant, in your opinion?
+[00:01:36.680 --> 00:01:37.680]   A really good rant.
+[00:01:37.680 --> 00:01:43.640]   Well, you got to start off by being really frustrated, ideally at a coworker or a team
+[00:01:43.640 --> 00:01:47.120]   that's not giving you an API.
+[00:01:47.120 --> 00:01:53.640]   And then you get really, really hammered one night, and then the rest usually just comes
+[00:01:53.640 --> 00:01:54.640]   naturally.
+[00:01:54.640 --> 00:01:56.640]   Love that.
+[00:01:56.640 --> 00:02:00.440]   And when did this sort of start, if you can take us back a little bit?
+[00:02:00.440 --> 00:02:05.640]   Yeah, so I mean, like I kind of started before there was like anything, like blogging or
+[00:02:05.640 --> 00:02:06.640]   anything like that.
+[00:02:06.640 --> 00:02:07.840]   I was doing it at Amazon.
+[00:02:07.840 --> 00:02:12.760]   Okay, because when I started Amazon, there was only like 250 people in the whole company,
+[00:02:12.760 --> 00:02:15.400]   including customer service and stuff was very small.
+[00:02:15.400 --> 00:02:20.780]   And so the engineering team was only like, I don't know, maybe 50 or 80 people.
+[00:02:20.780 --> 00:02:25.520]   And so as they grew, like I knew everybody personally, right?
+[00:02:25.520 --> 00:02:30.240]   And as we grew, like there was a large contingent of people that was using Java, but they were
+[00:02:30.240 --> 00:02:35.480]   just like having to build really comical, really dumb stuff back in the early days of
+[00:02:35.480 --> 00:02:36.480]   Java.
+[00:02:36.480 --> 00:02:40.400]   And I started getting kind of mad that we weren't using better languages.
+[00:02:40.400 --> 00:02:45.480]   We were using like Perl and PHP and just a bunch of, right?
+[00:02:45.480 --> 00:02:49.280]   So I started this kind of like soap boxing internally, right?
+[00:02:49.280 --> 00:02:53.040]   To like 150, 200 people, it eventually grew to like seven or 800 people.
+[00:02:53.040 --> 00:02:57.280]   Eventually I left, I went to Google, I brought them with me, the CTO of Werner Vogels.
+[00:02:57.280 --> 00:03:01.440]   He like called me up and said that I needed to remove one of them because it gave away
+[00:03:01.440 --> 00:03:03.040]   a little too much confidential information.
+[00:03:03.040 --> 00:03:04.040]   So fine.
+[00:03:04.040 --> 00:03:07.080]   I took that one out and I published the rest of them.
+[00:03:07.080 --> 00:03:08.840]   And nothing happened.
+[00:03:08.840 --> 00:03:10.080]   Nothing happened for six months.
+[00:03:10.080 --> 00:03:13.920]   So my, actually my biggest piece of advice to you is like, if you're going to write something
+[00:03:13.920 --> 00:03:17.920]   big, like write it, but then don't expect anything to happen for a few months.
+[00:03:17.920 --> 00:03:20.800]   It takes time for people to like absorb, right?
+[00:03:20.800 --> 00:03:24.320]   Six months later, like on the news, all of a sudden people start walking up to me at
+[00:03:24.320 --> 00:03:26.160]   Google going, you know, I read your blog.
+[00:03:26.160 --> 00:03:27.280]   I'm like, well, which one?
+[00:03:27.280 --> 00:03:28.640]   And they'd like name one.
+[00:03:28.640 --> 00:03:29.640]   Oh, okay.
+[00:03:29.640 --> 00:03:30.640]   Weird.
+[00:03:30.640 --> 00:03:32.360]   And then somebody else the same day be like, I read your blog.
+[00:03:32.360 --> 00:03:33.360]   And I'm like, yeah, which one?
+[00:03:33.360 --> 00:03:35.120]   And they named a different one.
+[00:03:35.120 --> 00:03:36.280]   And I'm like, what's happening?
+[00:03:36.280 --> 00:03:37.280]   Right.
+[00:03:37.280 --> 00:03:39.760]   And it was, it was that somebody had found them and they made hacker news and people
+[00:03:39.760 --> 00:03:43.280]   were reading all of them, all the old Amazon ads, right?
+[00:03:43.280 --> 00:03:48.040]   So like at that point, I was like, alright, well, I guess I'll keep going.
+[00:03:48.040 --> 00:03:50.240]   So that, that part's pretty cool.
+[00:03:50.240 --> 00:03:56.320]   I would say typically a lot of things, I think most engineers rant, but most people rant
+[00:03:56.320 --> 00:04:01.720]   in private on calls, which are either not recorded or people don't write about it.
+[00:04:01.720 --> 00:04:07.120]   In many of the posts slash rants that you have, and sometimes your YouTube tech talk
+[00:04:07.120 --> 00:04:14.400]   series too, you're not afraid to share their opinions and sometimes name names as well.
+[00:04:14.400 --> 00:04:20.520]   And typically, at least when I was starting out in tech, I was told Silicon Valley is
+[00:04:20.520 --> 00:04:23.880]   a tech community in general is a very small world.
+[00:04:23.880 --> 00:04:27.600]   So just make sure not you don't piss anyone off, even if you don't like them.
+[00:04:27.600 --> 00:04:31.720]   I was like, okay, that's a fair piece of advice.
+[00:04:31.720 --> 00:04:35.160]   Now in your case, when you're sharing these opinions, a lot of people tend to agree with
+[00:04:35.160 --> 00:04:41.800]   the opinions you have, but the people you're sharing the opinion of may not necessarily
+[00:04:41.800 --> 00:04:42.800]   feel that way.
+[00:04:42.800 --> 00:04:50.880]   So I'm curious, was this a concern ever in terms of when you share your thoughts or like,
+[00:04:50.880 --> 00:04:51.880]   you know what, who cares?
+[00:04:51.880 --> 00:04:52.880]   They're just shared.
+[00:04:52.880 --> 00:05:02.080]   I mean, yeah, almost every single post they ever did at Google pissed off one VP or right.
+[00:05:02.080 --> 00:05:06.240]   And they did grumble at me about it, but they wouldn't, they wouldn't censor it, but you
+[00:05:06.240 --> 00:05:10.880]   know, I'm going to, I'm going to say something that I've never said before, but I'm becoming
+[00:05:10.880 --> 00:05:16.720]   more and more convinced of it as I get old, old, old, which is that companies, they really
+[00:05:16.720 --> 00:05:19.160]   are people, okay?
+[00:05:19.160 --> 00:05:23.080]   Or they're very person-like and they can have a personality, right?
+[00:05:23.080 --> 00:05:27.880]   That's kind of a reflection of their leader plus their culture, plus maybe their domain.
+[00:05:27.880 --> 00:05:32.000]   And I think that as we move forward in this world where oligarchs are having more and
+[00:05:32.000 --> 00:05:37.520]   more and more power and sway over governments, the only people that are powerful enough that
+[00:05:37.520 --> 00:05:41.200]   we can turn to are corporations, right?
+[00:05:41.200 --> 00:05:44.280]   And most of them, they don't talk.
+[00:05:44.280 --> 00:05:46.520]   They're secretive, right?
+[00:05:46.520 --> 00:05:50.080]   They're all like a bunch of cloak and dagger stealing around an alleyway is because they
+[00:05:50.080 --> 00:05:53.840]   got, you know, gun shy from, you know, from lawsuits or whatever, right?
+[00:05:53.840 --> 00:05:58.320]   You know, plus, plus your brand is always in free fall.
+[00:05:58.320 --> 00:06:02.400]   I don't know if you guys know this, but the Google brand, when it was peaked, it was like
+[00:06:02.400 --> 00:06:06.960]   early 2000s and I was talking to the public relations folks and they were like, yeah,
+[00:06:06.960 --> 00:06:11.600]   you know, brands always decline basically over time.
+[00:06:11.600 --> 00:06:12.600]   I don't know.
+[00:06:12.600 --> 00:06:14.040]   Amazon might be an exception to that, right?
+[00:06:14.040 --> 00:06:17.640]   They've done really, really well with their brand, but you know, yeah, Google, Google,
+[00:06:17.640 --> 00:06:22.320]   you know, people decided they were evil, like, you know, 10 years in, they weren't trying
+[00:06:22.320 --> 00:06:24.600]   to be, I don't think so.
+[00:06:24.600 --> 00:06:33.360]   So yeah, I mean, like, I think that companies need to talk more about what they do and what
+[00:06:33.360 --> 00:06:39.320]   happens inside of them and the learnings that we can all get from each other that we don't
+[00:06:39.320 --> 00:06:40.520]   share with each other.
+[00:06:40.520 --> 00:06:46.280]   I think it's absolutely ridiculous that people are so afraid to talk about the stuff that
+[00:06:46.280 --> 00:06:50.640]   we all experience every single day in our corporate jobs.
+[00:06:50.640 --> 00:06:52.280]   We don't share.
+[00:06:52.280 --> 00:06:53.280]   And you know what?
+[00:06:53.280 --> 00:06:58.240]   The time is, it is time for sharing because tech is under attack because they're considered
+[00:06:58.240 --> 00:07:03.680]   to have a monopoly on information, you know, like, you know, unbiased, true stuff.
+[00:07:03.680 --> 00:07:09.260]   And that attack is going to catch us real off guard unless like tech gets together.
+[00:07:09.260 --> 00:07:10.480]   And right now it's all backwards.
+[00:07:10.480 --> 00:07:11.480]   I'm serious.
+[00:07:11.480 --> 00:07:12.800]   You guys know this is happening, right?
+[00:07:12.800 --> 00:07:18.120]   So like, I'm proud of the fact that I speak up when people are doing stupid stuff, you
+[00:07:18.120 --> 00:07:20.040]   know, and I think more people need to do it.
+[00:07:20.040 --> 00:07:24.200]   And you just need to just, if you've got a voice, like, get it out there, you know, and
+[00:07:24.200 --> 00:07:30.280]   if you've got something meaningful to say, you know, make it funny, I want people to
+[00:07:30.280 --> 00:07:31.280]   listen.
+[00:07:31.280 --> 00:07:38.880]   So, you really got me ranting, but that's one new, brand new thought for me, right?
+[00:07:38.880 --> 00:07:40.160]   Very well said.
+[00:07:40.160 --> 00:07:47.360]   And in terms of the making it funny part, so like, I think this is unique to your writing
+[00:07:47.360 --> 00:07:51.040]   style plus speaking style too, and I think that's what, at least in my opinion, makes
+[00:07:51.040 --> 00:07:57.040]   a lot of difference, where if I or someone else just goes online and says a bunch of
+[00:07:57.040 --> 00:08:04.600]   angry things at people or at things that they are disagreeing with, a lot of people wouldn't
+[00:08:04.600 --> 00:08:08.840]   be happy, even the ones who would agree with it, because they would just see the anger.
+[00:08:08.840 --> 00:08:15.620]   But then when someone reads your posts, they tend to always not, at least I do.
+[00:08:15.620 --> 00:08:21.220]   And I'm also laughing while reading it or listening to you.
+[00:08:21.220 --> 00:08:24.080]   How did you develop that unique style?
+[00:08:24.080 --> 00:08:29.720]   Look, you got to be able to make yourself laugh, right?
+[00:08:29.720 --> 00:08:33.560]   I mean, like, genuine, you got to think of something that's so funny that you were burst
+[00:08:33.560 --> 00:08:37.440]   out laughing out loud, and you're like, oh, I could never say that.
+[00:08:37.440 --> 00:08:39.400]   And that's the germ of your idea right there.
+[00:08:39.400 --> 00:08:40.400]   Okay.
+[00:08:40.400 --> 00:08:45.320]   It's like, okay, how can I say this and get away with it, right?
+[00:08:45.320 --> 00:08:48.360]   And it's, you know, it's a bit of art, but I mean, like, you've got to practice it all
+[00:08:48.360 --> 00:08:49.360]   day long.
+[00:08:49.360 --> 00:08:53.680]   You got to, right, just see the humorous side of things and sort of remember it.
+[00:08:53.680 --> 00:08:56.080]   And then when it comes time, you know, be bold, right?
+[00:08:56.080 --> 00:08:57.640]   Say the funny thing.
+[00:08:57.640 --> 00:09:01.800]   It's, you know, it's rough these days, right?
+[00:09:01.800 --> 00:09:06.040]   But I don't know, for some reason, there's a lot of low hanging fruit in the corporate
+[00:09:06.040 --> 00:09:09.240]   world, right?
+[00:09:09.240 --> 00:09:13.800]   So when I have those ideas where in my head, right, I think of something and I'm like,
+[00:09:13.800 --> 00:09:16.760]   oh my gosh, I'm like the funniest person ever.
+[00:09:16.760 --> 00:09:20.880]   And then, you know, 30 minutes later, I go and I write it down and then I tried to, you
+[00:09:20.880 --> 00:09:26.440]   know, like position it and I'm like, okay, you know, maybe, maybe not the funniest person.
+[00:09:26.440 --> 00:09:27.440]   I know.
+[00:09:27.440 --> 00:09:33.520]   Is there like a process you use in terms of, so you said like practice that like all day,
+[00:09:33.520 --> 00:09:34.520]   but like more concretely.
+[00:09:34.520 --> 00:09:35.520]   Right?
+[00:09:35.520 --> 00:09:41.280]   You hit a bottle of wine and I actually quit drinking in 2016.
+[00:09:41.280 --> 00:09:47.920]   But no, it's it's I guess there's the Mozart's out there who like already have it well formed
+[00:09:47.920 --> 00:09:50.960]   in their head and they just write it down and it's nice and clean.
+[00:09:50.960 --> 00:09:54.360]   And then there's the Beethoven's that just like scratch it out over and over and over
+[00:09:54.360 --> 00:09:55.760]   and over again until it's right.
+[00:09:55.760 --> 00:09:56.760]   Okay.
+[00:09:56.760 --> 00:09:58.560]   I think most of us are like the Beethoven's, right?
+[00:09:58.560 --> 00:10:00.480]   You know, you sit down and it's not right.
+[00:10:00.480 --> 00:10:01.680]   You got a sketch of it.
+[00:10:01.680 --> 00:10:05.120]   You do some jokes in there, but some of them aren't landing or they're in the wrong order
+[00:10:05.120 --> 00:10:06.120]   or whatever.
+[00:10:06.120 --> 00:10:10.480]   And so like it's, you know, the writing process is pure generation and you're just trying
+[00:10:10.480 --> 00:10:13.280]   to enjoy yourself and make a bunch of interesting points.
+[00:10:13.280 --> 00:10:17.080]   The editing process can take months.
+[00:10:17.080 --> 00:10:21.700]   I have blogs that I'm sitting on that I started writing last year that I still haven't published
+[00:10:21.700 --> 00:10:26.600]   yet because they're not right yet, you know, and you can tell when I'm rushed and when
+[00:10:26.600 --> 00:10:29.280]   people are rushing me out and they got to get a blog post out, it's not going to be
+[00:10:29.280 --> 00:10:30.280]   as high quality.
+[00:10:30.280 --> 00:10:33.680]   When I can take my time and I can think it through and research it and make sure the
+[00:10:33.680 --> 00:10:38.800]   jokes still make me laugh two, three months later, I'll pick it up and this is good.
+[00:10:38.800 --> 00:10:39.800]   Why didn't I publish this?
+[00:10:39.800 --> 00:10:40.800]   Oh yeah.
+[00:10:40.800 --> 00:10:42.880]   Cause I said that.
+[00:10:42.880 --> 00:10:47.800]   And so, you know, you go through this process, you know, and you, and you, right, look, look,
+[00:10:47.800 --> 00:10:51.840]   if you're not saying something that's like controversial, if you're not saying something
+[00:10:51.840 --> 00:11:00.600]   that divides people actually fairly evenly, then you're not interesting, right?
+[00:11:00.600 --> 00:11:03.880]   Unless you're, unless you're teaching on something, right, which is okay.
+[00:11:03.880 --> 00:11:08.320]   But like, if you want to be interesting, you gotta say stuff that's like, kind of like,
+[00:11:08.320 --> 00:11:11.880]   you're not even sure if you a hundred percent agree with it, right?
+[00:11:11.880 --> 00:11:17.240]   But, you know, you gotta be, you know, kind of, kind of thinking outside the box and,
+[00:11:17.240 --> 00:11:19.040]   and also, you know, I don't know.
+[00:11:19.040 --> 00:11:20.040]   Yeah.
+[00:11:20.040 --> 00:11:21.400]   But that's the important thing, right?
+[00:11:21.400 --> 00:11:26.240]   Is if you can go, if you can go back and reread it later and laugh, then you know, you got
+[00:11:26.240 --> 00:11:27.240]   gold.
+[00:11:27.240 --> 00:11:29.040]   I like that.
+[00:11:29.040 --> 00:11:34.560]   Do you have these like archetypes in your head or like say proxies to friends or something
+[00:11:34.560 --> 00:11:38.960]   such that you know that, oh, when they read this, they would disagree, or like when they
+[00:11:38.960 --> 00:11:40.880]   read this, you would agree.
+[00:11:40.880 --> 00:11:41.880]   Interesting.
+[00:11:41.880 --> 00:11:45.720]   That's how you form sort of like a 50/50 split sort of.
+[00:11:45.720 --> 00:11:46.720]   Yeah.
+[00:11:46.720 --> 00:11:47.720]   Yeah.
+[00:11:47.720 --> 00:11:48.720]   Yeah.
+[00:11:48.720 --> 00:11:49.720]   Yeah.
+[00:11:49.720 --> 00:11:51.440]   And I actually learned that trick from like, you know, writers like Stephen King and Neil
+[00:11:51.440 --> 00:11:55.200]   Steffensen from their books, like Stephen King's on writing is really good.
+[00:11:55.200 --> 00:11:57.480]   Kurt Vonnegut did a really good one on it.
+[00:11:57.480 --> 00:12:01.800]   Neil Steffensen came to Google and talked to us for like an hour and a half, right?
+[00:12:01.800 --> 00:12:02.800]   That was a treat.
+[00:12:02.800 --> 00:12:07.280]   There were like, I don't know, 40 or 50 of us in the room, you know, and, you know, we
+[00:12:07.280 --> 00:12:08.680]   got, I got tips from all of them.
+[00:12:08.680 --> 00:12:13.160]   Of course, the number one tip from every writer is write, right?
+[00:12:13.160 --> 00:12:14.400]   Get up in the morning and write and write and write.
+[00:12:14.400 --> 00:12:15.720]   And that's how you get good at it.
+[00:12:15.720 --> 00:12:17.600]   And there's a lot of truth to that.
+[00:12:17.600 --> 00:12:21.320]   But there's also a lot of, there's a lot of value in picking a person and writing the
+[00:12:21.320 --> 00:12:26.600]   post for them, one person, and maybe having like a peanut gallery of other people that
+[00:12:26.600 --> 00:12:27.600]   you know disagree.
+[00:12:27.600 --> 00:12:30.740]   And you kind of just like think about how they're going to take it to you, right?
+[00:12:30.740 --> 00:12:32.240]   I absolutely do that.
+[00:12:32.240 --> 00:12:38.640]   I mean, like I can even name the people that I wrote the last like five blog posts for.
+[00:12:38.640 --> 00:12:41.240]   I won't, but I could.
+[00:12:41.240 --> 00:12:44.480]   Like, how do you find those people?
+[00:12:44.480 --> 00:12:49.120]   Like how do you yeah, like out of all your friends were like, you know, people that you
+[00:12:49.120 --> 00:12:53.120]   know, like how do you find the archetypes?
+[00:12:53.120 --> 00:12:57.360]   You know, I'll, I talk to a lot of people through the industry and a lot of, a lot of
+[00:12:57.360 --> 00:13:03.400]   my old friends are like super, super high up there now, you know, like they're, they've
+[00:13:03.400 --> 00:13:11.000]   got, you know, 20 or 30,000 people in their org, you know, massive fortune 10 companies
+[00:13:11.000 --> 00:13:12.000]   or whatever.
+[00:13:12.000 --> 00:13:17.560]   And it's funny cause the woes and their, their trials and tribulations are pretty much identical
+[00:13:17.560 --> 00:13:21.320]   to the couple of hundred people companies and the series who's brought up.
+[00:13:21.320 --> 00:13:23.240]   So everybody's in the same boat right now.
+[00:13:23.240 --> 00:13:24.240]   Right?
+[00:13:24.240 --> 00:13:27.200]   So listening to them talk, I think, wow, I could tell a story about something.
+[00:13:27.200 --> 00:13:31.240]   I saw here and I know it, it, it, it applies to their org too.
+[00:13:31.240 --> 00:13:32.240]   Right?
+[00:13:32.240 --> 00:13:35.800]   So I'll just kind of like poke the bear a little bit like you, I'm going to do this
+[00:13:35.800 --> 00:13:37.560]   on stage in Las Vegas in two weeks.
+[00:13:37.560 --> 00:13:40.360]   I'm going to stand up and poke the bear a little bit.
+[00:13:40.360 --> 00:13:41.360]   Yeah.
+[00:13:41.360 --> 00:13:42.360]   Yeah.
+[00:13:42.360 --> 00:13:46.720]   I'm giving it a note at this conference.
+[00:13:46.720 --> 00:13:52.080]   So well, yeah, so I don't know, what were we talking about the art of writing.
+[00:13:52.080 --> 00:13:55.520]   So you mentioned some of these books like Stephen King's on writing actually have it
+[00:13:55.520 --> 00:13:56.520]   in a bookshelf.
+[00:13:56.520 --> 00:13:57.520]   Right.
+[00:13:57.520 --> 00:13:58.520]   But I will.
+[00:13:58.520 --> 00:13:59.520]   Oh, it's great.
+[00:13:59.520 --> 00:14:00.520]   That's right.
+[00:14:00.520 --> 00:14:04.240]   Are there any other resources that you've come across that people could refer to?
+[00:14:04.240 --> 00:14:15.080]   I mean, you know, I've tried, right, but I mean, no, I mean, like the, the, ultimately
+[00:14:15.080 --> 00:14:21.680]   it's it's like that, it's like that Twitter exchange with the guy who wrote the worst
+[00:14:21.680 --> 00:14:27.680]   really of all time, the room, right?
+[00:14:27.680 --> 00:14:28.680]   What's his name?
+[00:14:28.680 --> 00:14:29.680]   And someone asked, Hey, I want to get, I want to start writing the screenplay.
+[00:14:29.680 --> 00:14:30.680]   What should I do?
+[00:14:30.680 --> 00:14:31.680]   And he replied, start.
+[00:14:31.680 --> 00:14:32.680]   Right.
+[00:14:32.680 --> 00:14:37.080]   I mean, this is like fundamentally like, well, you know, everybody says that everybody who's
+[00:14:37.080 --> 00:14:41.320]   successful in any sort of a entertainment or whatever kind of business has been doing it
+[00:14:41.320 --> 00:14:42.640]   for a long time.
+[00:14:42.640 --> 00:14:43.640]   Look at you guys.
+[00:14:43.640 --> 00:14:48.120]   You guys enjoy immense success with this podcast and you've been doing it for a long time now,
+[00:14:48.120 --> 00:14:49.640]   as long as high school.
+[00:14:49.640 --> 00:14:50.640]   Right.
+[00:14:50.640 --> 00:14:51.640]   And play time really flies by.
+[00:14:51.640 --> 00:14:57.200]   Well, I've been blogging now for, I mean, like, I guess, gosh, probably 20, 25, close
+[00:14:57.200 --> 00:14:58.200]   to 25 years.
+[00:14:58.200 --> 00:14:59.200]   And, right.
+[00:14:59.200 --> 00:15:04.080]   And so like you just person, everybody tells you this persistence, patience, just keep
+[00:15:04.080 --> 00:15:07.600]   it up because, and Neil Steffensen said this too.
+[00:15:07.600 --> 00:15:11.920]   He told us, he said, look, your first novel is going to be a failure and your second novel
+[00:15:11.920 --> 00:15:16.240]   and your third one, but eventually you're going to write a hit and people are going
+[00:15:16.240 --> 00:15:17.600]   to want more of it.
+[00:15:17.600 --> 00:15:21.360]   And if you've got nothing, it's your first novel, they're going to be like, oh, where?
+[00:15:21.360 --> 00:15:22.360]   Right.
+[00:15:22.360 --> 00:15:25.240]   But if you've got like an oomph, then they'll go, no, they'll make their way through it
+[00:15:25.240 --> 00:15:28.440]   and they'll find value and stuff that maybe they didn't see before.
+[00:15:28.440 --> 00:15:29.440]   It's really encouraging.
+[00:15:29.440 --> 00:15:32.520]   I know it's also discouraging because you're like, oh man, I can't become an overnight
+[00:15:32.520 --> 00:15:33.520]   success.
+[00:15:33.520 --> 00:15:39.440]   And nobody on YouTube, nobody out there is, you've got to build it up by little.
+[00:15:39.440 --> 00:15:44.480]   What kept you going when, you know, in that sixth month of like publishing all these blog
+[00:15:44.480 --> 00:15:49.600]   posts, right, which I assume after you publish it, you're like, this is pretty fucking great.
+[00:15:49.600 --> 00:15:54.840]   And then just crickets of like no sort of, you know, validation or no feedback from,
+[00:15:54.840 --> 00:15:55.840]   you know, anywhere.
+[00:15:55.840 --> 00:15:58.760]   Like, what kept you like keep at it?
+[00:15:58.760 --> 00:16:03.800]   Oh, even when I published all the Amazon ones, like when I joined Google.
+[00:16:03.800 --> 00:16:10.280]   Or just in general, in like when there is not a lot of feedback on your, on your writings.
+[00:16:10.280 --> 00:16:12.800]   You know, I've gone through a lot of dry spells.
+[00:16:12.800 --> 00:16:16.460]   Doing one of my blogs is so much work.
+[00:16:16.460 --> 00:16:17.460]   It really is.
+[00:16:17.460 --> 00:16:23.080]   I mean, you have no idea, I, the funny thing is I need to be able to, one of my rules is
+[00:16:23.080 --> 00:16:26.200]   that I have to be able to basically write the entire blog in one sitting.
+[00:16:26.200 --> 00:16:29.520]   And if I fail, I will go back and rewrite the whole thing.
+[00:16:29.520 --> 00:16:31.440]   So it has to, it has to.
+[00:16:31.440 --> 00:16:38.120]   Now during the editing process, they usually expand by 40 or 50%, but because I'm cutting
+[00:16:38.120 --> 00:16:41.680]   stuff that then other people who are helping me review it are adding stuff, believe it
+[00:16:41.680 --> 00:16:47.760]   or not, it's not me usually, but yeah.
+[00:16:47.760 --> 00:16:52.920]   I'm such a, I'm just like, I feel like everything that I say has to be new, which is stupid.
+[00:16:52.920 --> 00:16:54.440]   I'm doing it wrong.
+[00:16:54.440 --> 00:16:58.920]   Like to be really successful, you're supposed to say the same thing over and over again.
+[00:16:58.920 --> 00:17:03.040]   That's how, you know, demagogues work, right?
+[00:17:03.040 --> 00:17:06.280]   But I prefer to like not say the same thing over and over again.
+[00:17:06.290 --> 00:17:07.890]   because you can always go back and look at it.
+[00:17:07.890 --> 00:17:10.730]   Instead, I try to find new angles and nuances to things,
+[00:17:10.730 --> 00:17:11.770]   and that can take a long time,
+[00:17:11.770 --> 00:17:14.530]   so I may be able to publish once or twice a year
+[00:17:14.530 --> 00:17:16.170]   of anything serious.
+[00:17:16.170 --> 00:17:20.610]   But what keeps me going is I eventually get pissed off
+[00:17:20.610 --> 00:17:23.050]   enough about something, and I'm like, all right,
+[00:17:23.050 --> 00:17:25.650]   time to blah, blah, blah, blah, right?
+[00:17:25.650 --> 00:17:27.650]   I'm just, I'm riled.
+[00:17:27.650 --> 00:17:29.210]   And that's what I know, I'm gonna, right,
+[00:17:29.210 --> 00:17:30.370]   that it's gonna be good, right?
+[00:17:30.370 --> 00:17:32.050]   Because I'm heated, right?
+[00:17:32.050 --> 00:17:33.710]   But I'm also kinda snarky,
+[00:17:33.710 --> 00:17:35.930]   so then the jokes are gonna start flying, right?
+[00:17:35.930 --> 00:17:39.090]   'Cause I've seen how bad, and so that's the formula, right?
+[00:17:39.090 --> 00:17:41.690]   Is you think about it, you let it rattle around,
+[00:17:41.690 --> 00:17:44.490]   you can let it bake, and then at some point,
+[00:17:44.490 --> 00:17:46.170]   you get yourself worked up into,
+[00:17:46.170 --> 00:17:49.370]   you're in LLM generation mode,
+[00:17:49.370 --> 00:17:51.890]   and you look the whole thing out at once.
+[00:17:51.890 --> 00:17:53.650]   - So if you took an example of,
+[00:17:53.650 --> 00:17:56.050]   let's say one of your recent posts,
+[00:17:56.050 --> 00:17:57.890]   Death of a Junior Developer, for example,
+[00:17:57.890 --> 00:18:00.390]   which is an amazing post, we'll link that in the show notes.
+[00:18:00.390 --> 00:18:02.690]   Not that we need to, but we'll still do NP,
+[00:18:02.690 --> 00:18:04.450]   we should check it out.
+[00:18:04.450 --> 00:18:07.210]   If we had to take that one,
+[00:18:07.210 --> 00:18:09.170]   what did it look like to write that one?
+[00:18:09.170 --> 00:18:10.290]   How long did you sit on it?
+[00:18:10.290 --> 00:18:12.730]   How long did it take to write it completely?
+[00:18:12.730 --> 00:18:15.370]   And then what does editing look like?
+[00:18:15.370 --> 00:18:18.610]   - Yeah, I started that one probably,
+[00:18:18.610 --> 00:18:21.610]   and I started realizing what I wanted to write about
+[00:18:21.610 --> 00:18:23.970]   maybe in February, and it didn't come out 'til May,
+[00:18:23.970 --> 00:18:26.410]   so it was a good three months on that one.
+[00:18:26.410 --> 00:18:31.130]   And I am so glad that I researched this one
+[00:18:31.130 --> 00:18:33.210]   a little more than usual,
+[00:18:33.210 --> 00:18:36.330]   in the sense that I went to a bunch of colleagues
+[00:18:36.330 --> 00:18:37.770]   that I have a lot of respect for,
+[00:18:37.770 --> 00:18:39.230]   and found actually that some of them
+[00:18:39.230 --> 00:18:41.470]   were vehemently in favor,
+[00:18:41.470 --> 00:18:43.850]   and some of them were just like, nope, right?
+[00:18:43.850 --> 00:18:45.330]   So that was cool, right?
+[00:18:45.330 --> 00:18:46.770]   'Cause I was like, ooh,
+[00:18:46.770 --> 00:18:48.390]   I think both of these people are really smart,
+[00:18:48.390 --> 00:18:49.330]   and they disagree on this,
+[00:18:49.330 --> 00:18:51.830]   so we're on to something here, right?
+[00:18:51.830 --> 00:18:54.890]   But I mean, it really made people mad.
+[00:18:54.890 --> 00:18:59.170]   There's some YouTuber that painstakingly read out
+[00:18:59.170 --> 00:19:00.810]   all the words very slowly,
+[00:19:00.810 --> 00:19:03.170]   and then got about halfway through and started judging it,
+[00:19:03.170 --> 00:19:04.970]   but the funny thing was,
+[00:19:04.970 --> 00:19:09.330]   his followers got into this heated argument
+[00:19:09.330 --> 00:19:13.370]   about whether we matter or not as human beings.
+[00:19:13.370 --> 00:19:15.650]   I mean, that's how fundamental the point is
+[00:19:15.650 --> 00:19:16.490]   that I touched on.
+[00:19:16.490 --> 00:19:18.170]   I mean, like, come on, seriously.
+[00:19:18.170 --> 00:19:19.850]   And they're like, no, we matter,
+[00:19:19.850 --> 00:19:21.930]   which is really funny because I am the definitely
+[00:19:21.930 --> 00:19:24.550]   in the we don't matter key, right?
+[00:19:24.550 --> 00:19:27.210]   So that could actually be part of what's the resistance,
+[00:19:27.210 --> 00:19:29.250]   but I'm basically saying, yeah,
+[00:19:29.250 --> 00:19:31.250]   the old way of doing stuff, it's gone.
+[00:19:31.250 --> 00:19:34.170]   Just let it go, let the LLM do the work for you now.
+[00:19:34.170 --> 00:19:35.610]   You're staring at a higher level.
+[00:19:35.610 --> 00:19:37.210]   If you're not swimming, you're driving a boat.
+[00:19:37.210 --> 00:19:41.250]   And people are like, no, that just means we don't matter.
+[00:19:41.250 --> 00:19:43.890]   And it's funny to watch people melt down over this.
+[00:19:43.890 --> 00:19:46.210]   I guess I had my AI midlife crisis
+[00:19:46.210 --> 00:19:47.730]   just a little before they did.
+[00:19:47.730 --> 00:19:49.370]   Like I had mine about a year ago
+[00:19:49.370 --> 00:19:51.130]   where I just had an existential crisis
+[00:19:51.130 --> 00:19:52.570]   where it hit me hard.
+[00:19:52.570 --> 00:19:54.930]   I was stunned, I was like reeling
+[00:19:54.930 --> 00:19:57.050]   because I realized that many of the things
+[00:19:57.050 --> 00:20:00.570]   that I thought that I kind of like my value,
+[00:20:00.570 --> 00:20:02.610]   my sense of self-worth, my identity was tied up
+[00:20:02.610 --> 00:20:05.370]   in my ability to do things like memorize long things
+[00:20:05.370 --> 00:20:07.930]   or generate long things or whatever.
+[00:20:07.930 --> 00:20:11.130]   It's all just BS now, like computers do way better, right?
+[00:20:11.130 --> 00:20:12.970]   So like, that was tough.
+[00:20:12.970 --> 00:20:14.090]   I think a lot of other people
+[00:20:14.090 --> 00:20:15.610]   haven't gone through that yet.
+[00:20:15.610 --> 00:20:18.130]   So my blog really touched the nerve.
+[00:20:18.130 --> 00:20:21.110]   But I went through a lot of editing on that one.
+[00:20:21.110 --> 00:20:22.690]   We even took votes on the title.
+[00:20:22.690 --> 00:20:26.050]   We weren't sure if the title was gonna be too harsh.
+[00:20:26.050 --> 00:20:27.330]   Jean Kim, right?
+[00:20:27.330 --> 00:20:30.410]   Who's finally offered to let me talk
+[00:20:30.410 --> 00:20:33.290]   at the Enterprise Technology Leadership Summit
+[00:20:33.290 --> 00:20:35.370]   in Vegas in two weeks, which is gonna be awesome.
+[00:20:35.370 --> 00:20:38.210]   He's the one that contributed like,
+[00:20:38.210 --> 00:20:40.250]   it was chatting with him that I realized
+[00:20:40.250 --> 00:20:42.330]   this is hitting the whole industry.
+[00:20:42.330 --> 00:20:45.170]   And that's when I realized, oh, wow, okay, so this is big.
+[00:20:45.170 --> 00:20:46.410]   And you know what?
+[00:20:46.410 --> 00:20:48.390]   Like the funny thing is a lot of people came out,
+[00:20:48.390 --> 00:20:49.970]   people were calling me.
+[00:20:49.970 --> 00:20:52.690]   Friends, like old friends, like retired friends
+[00:20:52.690 --> 00:20:54.930]   were calling me and I figured out the pattern.
+[00:20:54.930 --> 00:20:56.970]   It was their kids who are graduating from college
+[00:20:56.970 --> 00:20:59.810]   and they were getting discouraged by my blog posts, right?
+[00:20:59.810 --> 00:21:01.490]   And they're mad, right?
+[00:21:01.490 --> 00:21:03.850]   But the funny thing is like a bunch of other people
+[00:21:03.850 --> 00:21:05.890]   called too, all right?
+[00:21:05.890 --> 00:21:08.430]   We got calls from some very large,
+[00:21:08.430 --> 00:21:11.450]   very, very large companies where you'd hear their name
+[00:21:11.450 --> 00:21:13.090]   and go, oh, that's money.
+[00:21:13.090 --> 00:21:15.330]   And they have thousands and thousands of developers
+[00:21:15.330 --> 00:21:17.370]   and a couple of them came to us and said, yeah,
+[00:21:17.370 --> 00:21:20.410]   they've been seeing signs of this as well, right?
+[00:21:20.410 --> 00:21:21.330]   We got confirmation.
+[00:21:21.330 --> 00:21:24.130]   So there's a huge change of foot.
+[00:21:24.130 --> 00:21:26.810]   And I was able to kind of like get in just at the right time
+[00:21:26.810 --> 00:21:28.450]   and show people's nose in it.
+[00:21:28.450 --> 00:21:32.970]   - I think that blog definitely had an impact
+[00:21:32.970 --> 00:21:34.090]   on a lot of people.
+[00:21:34.090 --> 00:21:38.190]   In fact, I've forwarded that blog to a few of my friends
+[00:21:38.190 --> 00:21:41.370]   who have their kids or someone they know
+[00:21:41.370 --> 00:21:42.850]   who's about to enter undergrad.
+[00:21:42.850 --> 00:21:45.450]   And they were essentially trying to figure it out,
+[00:21:45.450 --> 00:21:47.650]   or at least let's just say until last year,
+[00:21:47.650 --> 00:21:50.250]   their plan was obviously my kids are gonna do computer
+[00:21:50.250 --> 00:21:53.610]   science or the kid thought they would do computer science.
+[00:21:53.610 --> 00:21:55.850]   And now when they saw something like this
+[00:21:55.850 --> 00:21:57.890]   or they just see LLMs in general, they're like,
+[00:21:57.890 --> 00:22:00.650]   well, does it still make sense?
+[00:22:00.650 --> 00:22:02.970]   Should I still go on this route that I thought
+[00:22:02.970 --> 00:22:05.250]   for the past four years that I should be doing?
+[00:22:05.250 --> 00:22:08.730]   So when you get some of these calls,
+[00:22:08.730 --> 00:22:11.290]   at least for the camp of people who have,
+[00:22:11.290 --> 00:22:13.490]   let's say their kids trying to go to school,
+[00:22:13.490 --> 00:22:15.450]   what do you tell them?
+[00:22:15.450 --> 00:22:20.050]   - Well, I'm never gonna discourage someone
+[00:22:20.050 --> 00:22:21.630]   from going into computer science.
+[00:22:21.630 --> 00:22:23.450]   I mean, it's an amazing discipline
+[00:22:23.450 --> 00:22:25.090]   and it'll give you the foundation
+[00:22:25.090 --> 00:22:27.090]   you need to be a great, you know,
+[00:22:27.090 --> 00:22:29.930]   chop engineer, prompt engineer, you know,
+[00:22:29.930 --> 00:22:31.430]   doing chat programming.
+[00:22:31.430 --> 00:22:35.930]   But I mean, look at the, you saw the graph in there
+[00:22:35.930 --> 00:22:39.770]   from indeed.com, right, of software engineering jobs.
+[00:22:39.770 --> 00:22:42.650]   And basically they have, and the jobs come
+[00:22:42.650 --> 00:22:45.510]   when there's money and there's no money, right?
+[00:22:45.510 --> 00:22:47.850]   Okay, like there was an anomaly.
+[00:22:47.850 --> 00:22:49.210]   I'm gonna be talking about this in Vegas,
+[00:22:49.210 --> 00:22:51.490]   but the zero interest rate policy
+[00:22:51.490 --> 00:22:53.250]   and the trillion dollar stimulus package
+[00:22:53.250 --> 00:22:57.570]   during COVID injected so much money into the economy
+[00:22:57.570 --> 00:23:00.010]   that everybody had money for engineers.
+[00:23:00.010 --> 00:23:02.610]   And it caused all kinds of weird, weird knock on effects
+[00:23:02.610 --> 00:23:04.810]   in the industry that I'm gonna talk about.
+[00:23:04.810 --> 00:23:09.450]   But, you know, like there were jobs aplenty, yeah?
+[00:23:09.450 --> 00:23:12.410]   And now that that's over and moreover, right?
+[00:23:12.410 --> 00:23:15.090]   Like, yeah, AI provided a bit of a bubble,
+[00:23:15.090 --> 00:23:18.310]   a bit of a boost, but except in coding assistance
+[00:23:18.310 --> 00:23:21.450]   where we're seeing tremendous gains from AI.
+[00:23:21.450 --> 00:23:22.890]   Where else is it?
+[00:23:22.890 --> 00:23:27.010]   Like, I know that's a silly thing to say,
+[00:23:27.010 --> 00:23:28.530]   but we know it's right around the corner,
+[00:23:28.530 --> 00:23:31.350]   but like still investors are asking this question.
+[00:23:31.350 --> 00:23:33.570]   Yeah, where's the money?
+[00:23:33.570 --> 00:23:36.170]   'Cause it's been a year, year and a half.
+[00:23:36.170 --> 00:23:37.530]   Anyway.
+[00:23:37.530 --> 00:23:42.210]   - On these lines, so when it comes to publishing posts
+[00:23:42.210 --> 00:23:44.010]   at let's say when you were at Google,
+[00:23:44.010 --> 00:23:47.390]   companies that size typically have a policy
+[00:23:47.390 --> 00:23:50.170]   for what you can write on their company's website.
+[00:23:50.170 --> 00:23:51.570]   You can publish on your own blog
+[00:23:51.570 --> 00:23:53.410]   and you say, opinions are my own.
+[00:23:53.410 --> 00:23:57.250]   The last few blogs that you have published
+[00:23:57.250 --> 00:23:59.370]   are on Sourcegraph's website.
+[00:23:59.370 --> 00:24:01.250]   And there's a more difference.
+[00:24:01.250 --> 00:24:02.410]   Like if I'm reading your post
+[00:24:02.410 --> 00:24:04.450]   versus a post somewhere else wrote,
+[00:24:04.450 --> 00:24:05.870]   all of them are good.
+[00:24:05.870 --> 00:24:08.110]   Yours is way more entertaining.
+[00:24:08.110 --> 00:24:09.410]   No offense to anyone else.
+[00:24:09.410 --> 00:24:13.690]   Is there a policy at Sourcegraph
+[00:24:13.690 --> 00:24:16.690]   that lets Steve publish the post when it comes out?
+[00:24:16.690 --> 00:24:21.210]   Or do your posts go through the same review policy
+[00:24:21.210 --> 00:24:23.010]   that others might go through as well?
+[00:24:23.010 --> 00:24:31.050]   - Well, if I just said, I'm gonna post this, post it,
+[00:24:31.050 --> 00:24:32.410]   they would post it.
+[00:24:32.410 --> 00:24:36.450]   But Sourcegraph are my friends
+[00:24:36.450 --> 00:24:39.890]   and I wanna make sure my friends aren't caught blindsided.
+[00:24:39.890 --> 00:24:42.730]   In fact, we've got one right now that was so,
+[00:24:42.730 --> 00:24:44.890]   it's a really, really interesting blog.
+[00:24:44.890 --> 00:24:46.970]   I mean, my God, it's probably one of my most interesting
+[00:24:46.970 --> 00:24:49.970]   of all time, but it's so sensitive
+[00:24:49.970 --> 00:24:52.110]   that I basically have to rewrite
+[00:24:52.110 --> 00:24:55.170]   about three and a half or four pages out of 12.
+[00:24:55.170 --> 00:24:56.010]   It's a big one.
+[00:24:56.010 --> 00:25:01.570]   Because we wanna make sure that we're sensitive.
+[00:25:01.570 --> 00:25:03.630]   - I wanna spend a couple more minutes on the writing part
+[00:25:03.630 --> 00:25:06.930]   and we can move on to a lot of other topics.
+[00:25:06.930 --> 00:25:09.930]   You mentioned when you write a post,
+[00:25:09.930 --> 00:25:12.250]   you want to write that in almost one setting,
+[00:25:12.250 --> 00:25:14.170]   at least the major ideas.
+[00:25:14.170 --> 00:25:17.070]   - Oh man, I was gonna make a joke
+[00:25:17.070 --> 00:25:18.810]   about getting handcuffs.
+[00:25:18.810 --> 00:25:20.950]   I was like, okay, where are you getting the handcuffs
+[00:25:20.950 --> 00:25:22.290]   to cuff yourself to the chair?
+[00:25:22.290 --> 00:25:24.930]   Or it's like, do you lock yourself in a room
+[00:25:24.930 --> 00:25:26.090]   and throw away the keys?
+[00:25:26.090 --> 00:25:28.730]   Like, aw man, still my joke, Ron, I'm not cool.
+[00:25:28.730 --> 00:25:30.770]   I'm sorry, continue, please.
+[00:25:30.770 --> 00:25:32.090]   - Are there handcuffs involved?
+[00:25:32.090 --> 00:25:33.450]   Let's just ask that first.
+[00:25:33.450 --> 00:25:37.610]   Sorry, many times it happens to me
+[00:25:37.610 --> 00:25:39.290]   where something gets stuck in my head
+[00:25:39.290 --> 00:25:41.790]   where unless I do that thing,
+[00:25:41.790 --> 00:25:43.390]   I don't wanna do anything else.
+[00:25:43.390 --> 00:25:47.750]   Makes my family unhappy at times.
+[00:25:48.750 --> 00:25:51.330]   - Is that a similar situation here
+[00:25:51.330 --> 00:25:53.350]   where you have this blog post
+[00:25:53.350 --> 00:25:55.610]   or you're just so riled up that you need to write it down?
+[00:25:55.610 --> 00:25:58.310]   So unless you do this, everything else takes a backseat.
+[00:25:58.310 --> 00:26:03.350]   - I kind of work myself into a frenzy,
+[00:26:03.350 --> 00:26:04.790]   if that makes any sense.
+[00:26:04.790 --> 00:26:07.110]   So like, I'll set aside time to be like,
+[00:26:07.110 --> 00:26:09.430]   I think I'm gonna try to do the blog post this week.
+[00:26:09.430 --> 00:26:12.230]   That, I've usually got three or four at any given time
+[00:26:12.230 --> 00:26:14.110]   that need to be written.
+[00:26:14.110 --> 00:26:15.710]   Like right now I have two drafts
+[00:26:15.710 --> 00:26:17.950]   that need to be rewritten and finished, right?
+[00:26:17.950 --> 00:26:19.790]   And plus I got two more ideas.
+[00:26:19.790 --> 00:26:22.390]   And so I'll like, I'll pick one that seems promising.
+[00:26:22.390 --> 00:26:23.330]   I'll go back and read it,
+[00:26:23.330 --> 00:26:25.590]   see if any of the jokes kind of make me laugh.
+[00:26:25.590 --> 00:26:27.430]   If I'm into it, right?
+[00:26:27.430 --> 00:26:29.910]   And eventually, you know, maybe I won't
+[00:26:29.910 --> 00:26:31.230]   and I'll just go program or whatever.
+[00:26:31.230 --> 00:26:34.750]   But if I can kind of catch that feel of, oh yeah,
+[00:26:34.750 --> 00:26:37.990]   oh yeah, I remember now, those jerks.
+[00:26:37.990 --> 00:26:39.830]   And then at that point, I'm hooked, right?
+[00:26:39.830 --> 00:26:42.510]   And so like, when I say one sitting, you know,
+[00:26:42.510 --> 00:26:44.590]   I mean, like the reason I do it in one sitting,
+[00:26:44.590 --> 00:26:45.910]   it's the whole, what is it?
+[00:26:45.910 --> 00:26:47.710]   The Edgar Allan Poe quote, you know,
+[00:26:47.710 --> 00:26:50.330]   where he basically said, like a good story
+[00:26:50.330 --> 00:26:52.070]   has to be readable in one sitting.
+[00:26:52.070 --> 00:26:52.910]   - Yeah.
+[00:26:52.910 --> 00:26:55.870]   - You know, I actually, and so if I, I type pretty fast
+[00:26:55.870 --> 00:26:57.550]   and so if I write it in one sitting,
+[00:26:57.550 --> 00:26:59.350]   then it usually winds up being readable
+[00:26:59.350 --> 00:27:00.870]   in one sitting for most people.
+[00:27:00.870 --> 00:27:04.230]   And I find that that's a good,
+[00:27:04.230 --> 00:27:07.710]   I don't know, it's a good forcing function, right?
+[00:27:07.710 --> 00:27:09.910]   So that I don't write forever.
+[00:27:09.910 --> 00:27:12.070]   - And also that you actually write and finish.
+[00:27:12.070 --> 00:27:13.790]   - Yep, yep.
+[00:27:13.790 --> 00:27:17.270]   - And one last thing on this bit about just writing in rants.
+[00:27:17.270 --> 00:27:21.390]   Have you ever experienced any backlash?
+[00:27:21.390 --> 00:27:25.190]   (laughing)
+[00:27:25.190 --> 00:27:27.110]   Well, not people getting pissed off,
+[00:27:27.110 --> 00:27:29.350]   but them getting in your way.
+[00:27:29.350 --> 00:27:31.430]   In terms of you want to do something,
+[00:27:31.430 --> 00:27:34.550]   work somewhere, convince people,
+[00:27:34.550 --> 00:27:37.470]   but something's getting in your way
+[00:27:37.470 --> 00:27:39.470]   because of some of the things you've said.
+[00:27:39.470 --> 00:27:43.110]   - Sure, I mean, yeah.
+[00:27:43.110 --> 00:27:48.110]   I mean, there are gonna be a lot of people who,
+[00:27:48.110 --> 00:27:50.870]   in this industry who just don't like me
+[00:27:50.870 --> 00:27:54.550]   and that's gonna be pretty normal if your name is known
+[00:27:54.550 --> 00:27:55.790]   and there's gonna be some percentage of people
+[00:27:55.790 --> 00:27:57.630]   that don't like you.
+[00:27:57.630 --> 00:27:58.790]   And that's totally fine.
+[00:27:58.790 --> 00:28:04.230]   And if it's over my blog, then yeah, they can get,
+[00:28:04.230 --> 00:28:05.870]   you know, who knows, right?
+[00:28:05.870 --> 00:28:07.830]   But I mean, like by and large,
+[00:28:07.830 --> 00:28:12.070]   you know, people are pretty respectful in our industry
+[00:28:12.070 --> 00:28:14.510]   and also I would say that my blogs
+[00:28:14.510 --> 00:28:16.710]   have done more to open doors for me.
+[00:28:16.710 --> 00:28:19.710]   I mean, like I've kind of developed a thick skin
+[00:28:19.710 --> 00:28:22.150]   over the hate mail and the angry letters and all that.
+[00:28:22.150 --> 00:28:23.830]   I mean, that was something that bothered me
+[00:28:23.830 --> 00:28:25.950]   a lot more like 15, 20 years ago, right?
+[00:28:25.950 --> 00:28:27.630]   But now I just realized it's like,
+[00:28:27.630 --> 00:28:29.550]   you could put out the best video game of all time
+[00:28:29.550 --> 00:28:31.910]   and get a bunch of hate mail and I'm like, oh, right?
+[00:28:31.910 --> 00:28:33.110]   I mean, like I saw that happen
+[00:28:33.110 --> 00:28:34.550]   with things like "Tears of the Kingdom," whatever.
+[00:28:34.550 --> 00:28:35.990]   It's like, oh, I get it.
+[00:28:35.990 --> 00:28:38.270]   There's just a lot of angry people out there, right?
+[00:28:38.270 --> 00:28:40.790]   So you don't let that part bother you.
+[00:28:40.790 --> 00:28:41.990]   But yeah, I don't know.
+[00:28:41.990 --> 00:28:47.350]   Yeah, that's weird.
+[00:28:47.350 --> 00:28:50.910]   - I had a follow-up for the, you know,
+[00:28:50.910 --> 00:28:52.870]   I know I'm not in the group being able to vote
+[00:28:52.870 --> 00:28:54.230]   on the titles of the posts,
+[00:28:54.230 --> 00:28:59.230]   but I love the AI midlife crisis as the title.
+[00:28:59.230 --> 00:29:02.990]   Would you be interested in like diving
+[00:29:02.990 --> 00:29:03.950]   a little bit more into that?
+[00:29:03.950 --> 00:29:05.550]   Like what-
+[00:29:05.550 --> 00:29:07.550]   - Into my AI midlife crisis?
+[00:29:07.550 --> 00:29:09.870]   (laughing)
+[00:29:09.870 --> 00:29:10.710]   - For real?
+[00:29:10.710 --> 00:29:14.430]   Yeah, I mean, I guess, sure.
+[00:29:14.430 --> 00:29:15.270]   I mean,
+[00:29:15.270 --> 00:29:18.030]   yeah.
+[00:29:18.030 --> 00:29:22.830]   LLMs are terrifying, right?
+[00:29:22.830 --> 00:29:25.190]   I mean, like, I just, I don't think people,
+[00:29:25.190 --> 00:29:26.030]   I don't think people will really,
+[00:29:26.030 --> 00:29:28.310]   most people pieced it together yet.
+[00:29:28.310 --> 00:29:29.150]   But
+[00:29:29.150 --> 00:29:35.790]   I remember hearing, I don't know, four years ago
+[00:29:35.790 --> 00:29:38.270]   that like there were a half a billion users
+[00:29:38.270 --> 00:29:40.630]   of this chat bot in China.
+[00:29:40.630 --> 00:29:42.470]   And this is before LLMs, right?
+[00:29:42.470 --> 00:29:44.350]   This is so, this is with good models,
+[00:29:44.350 --> 00:29:46.470]   but definitely not transformers.
+[00:29:46.470 --> 00:29:48.310]   And I heard it was quite,
+[00:29:48.310 --> 00:29:50.870]   I heard it's quite addictive, or it was, right?
+[00:29:50.870 --> 00:29:52.990]   You have a billion people addicted to a chat,
+[00:29:52.990 --> 00:29:54.230]   addicted to a chat bot.
+[00:29:54.230 --> 00:29:58.270]   That's gonna happen here, like within a year, right?
+[00:29:58.270 --> 00:30:00.870]   'Cause, you know, opening eyes, even warning people.
+[00:30:00.870 --> 00:30:03.830]   You know, and it's like,
+[00:30:03.830 --> 00:30:05.230]   so it's a combination of like,
+[00:30:05.230 --> 00:30:07.790]   I worry very, very, very much
+[00:30:07.790 --> 00:30:09.590]   about the social consequences.
+[00:30:09.590 --> 00:30:12.670]   People's bank accounts are gonna get drained, right?
+[00:30:12.670 --> 00:30:14.470]   Because somebody's gonna get a phone call,
+[00:30:14.470 --> 00:30:15.870]   a banker's gonna get a phone call
+[00:30:15.870 --> 00:30:17.150]   from somebody who claims to be you,
+[00:30:17.150 --> 00:30:19.390]   or it sounds just like you and blah, blah, blah, right?
+[00:30:19.390 --> 00:30:20.590]   Or you're gonna get a phone call
+[00:30:20.590 --> 00:30:22.870]   from a family member or whatever.
+[00:30:22.870 --> 00:30:24.990]   And this is terrifying because you could happen,
+[00:30:24.990 --> 00:30:28.190]   it could start happening like today, yeah?
+[00:30:28.190 --> 00:30:30.150]   You know, so I mean, like the midlife crisis
+[00:30:30.150 --> 00:30:32.870]   has more been like a kind of a rolling snowball
+[00:30:32.870 --> 00:30:36.190]   where first I realized I don't matter, right?
+[00:30:36.190 --> 00:30:39.150]   Our brains are just neural nets, you know?
+[00:30:39.150 --> 00:30:41.550]   And then, I mean, absolutely you can have beliefs
+[00:30:41.550 --> 00:30:45.030]   beyond this, of course, and can and do, right?
+[00:30:45.030 --> 00:30:49.270]   But still our brains aren't really particularly special.
+[00:30:49.270 --> 00:30:51.070]   We'll be able to engineer them, right?
+[00:30:51.070 --> 00:30:54.030]   So that's a tough hurdle for a lot of people to get over.
+[00:30:54.030 --> 00:30:55.750]   And then when you look at what's gonna happen
+[00:30:55.750 --> 00:30:59.150]   to our culture, to things that we cherish and hang onto,
+[00:30:59.150 --> 00:31:05.030]   even hardened like progressives,
+[00:31:05.030 --> 00:31:06.870]   I think are not totally prepared
+[00:31:06.870 --> 00:31:08.510]   for how much that's gonna change.
+[00:31:08.510 --> 00:31:13.030]   Maybe I'm, I mean, like people call me a doomer though,
+[00:31:13.030 --> 00:31:14.190]   right, so I don't know.
+[00:31:14.190 --> 00:31:20.110]   - Was there any, did you come up with any sort of solution,
+[00:31:20.110 --> 00:31:22.670]   you know, including buying a motorbike
+[00:31:22.670 --> 00:31:27.030]   to kind of counterreact this midlife crisis?
+[00:31:27.030 --> 00:31:29.750]   - So like, I mean, like just to give you
+[00:31:29.750 --> 00:31:31.710]   one concrete example,
+[00:31:33.910 --> 00:31:37.830]   I consider myself to be very, very good
+[00:31:37.830 --> 00:31:42.110]   at arranging music for a guitar,
+[00:31:42.110 --> 00:31:44.070]   whether it's electric guitar, acoustic guitar, whatever.
+[00:31:44.070 --> 00:31:45.470]   I can play almost anything.
+[00:31:45.470 --> 00:31:47.710]   Like I played, at one point I was playing
+[00:31:47.710 --> 00:31:51.390]   all 24 of Paganini's violin caprices
+[00:31:51.390 --> 00:31:53.870]   on a steel string guitar, that kind of thing.
+[00:31:53.870 --> 00:31:57.470]   Hundreds and hundreds of pages of transcriptions, right?
+[00:31:57.470 --> 00:31:59.230]   And as soon as LLMs came out, I was like,
+[00:31:59.230 --> 00:32:01.590]   oh, well, that's done, right?
+[00:32:01.590 --> 00:32:02.910]   No more of that.
+[00:32:02.910 --> 00:32:04.190]   Like, that's just stupid
+[00:32:04.190 --> 00:32:05.830]   because a model will be able to do that.
+[00:32:05.830 --> 00:32:07.230]   You just give them a bunch of examples
+[00:32:07.230 --> 00:32:08.670]   and be like, give me a good transcription
+[00:32:08.670 --> 00:32:09.510]   and you get arrangement.
+[00:32:09.510 --> 00:32:11.190]   It's just a little bit of prompt engineering.
+[00:32:11.190 --> 00:32:13.350]   Like that skill that I developed over all those years,
+[00:32:13.350 --> 00:32:15.990]   it's just stupid now, right?
+[00:32:15.990 --> 00:32:18.390]   And it's like, so I don't do it at all.
+[00:32:18.390 --> 00:32:20.430]   I threw all my, right, just throw it all away.
+[00:32:20.430 --> 00:32:21.910]   I'd love to train a model.
+[00:32:21.910 --> 00:32:23.670]   I'd love to keep doing it, you know,
+[00:32:23.670 --> 00:32:25.190]   'cause like you can use prompt engineering
+[00:32:25.190 --> 00:32:26.590]   to kind of make it my own, you know,
+[00:32:26.590 --> 00:32:27.790]   music or arrangement or whatever,
+[00:32:27.790 --> 00:32:30.510]   but ultimately all the clever work of, you know,
+[00:32:30.510 --> 00:32:33.190]   mapping fingerings and voices and doing inversions
+[00:32:33.190 --> 00:32:34.150]   and stuff like that.
+[00:32:34.150 --> 00:32:35.870]   The model's gonna do that, right?
+[00:32:35.870 --> 00:32:37.190]   So just basically a lot of things
+[00:32:37.190 --> 00:32:38.430]   that are kind of pattern matching
+[00:32:38.430 --> 00:32:40.550]   or kind of like almost tedious
+[00:32:40.550 --> 00:32:42.830]   that I got really good at in my life.
+[00:32:42.830 --> 00:32:45.390]   I wouldn't even do now.
+[00:32:45.390 --> 00:32:46.630]   Like, why would you do it?
+[00:32:46.630 --> 00:32:50.110]   You guys look really depressed,
+[00:32:50.110 --> 00:32:52.830]   so maybe I should talk about that.
+[00:32:52.830 --> 00:32:57.430]   - I think, so we are expecting a baby
+[00:32:57.430 --> 00:32:59.390]   in a couple of months and--
+[00:32:59.390 --> 00:33:01.590]   - Look, congrats. - Thank you.
+[00:33:01.590 --> 00:33:05.590]   Some of these, on similar lines,
+[00:33:05.590 --> 00:33:08.390]   when I think about AI, LLMs and all the pieces you said
+[00:33:08.390 --> 00:33:10.870]   that we have come to cherish as part of our culture,
+[00:33:10.870 --> 00:33:12.470]   I do think about that.
+[00:33:12.470 --> 00:33:15.630]   And then I find myself without any answers,
+[00:33:15.630 --> 00:33:17.270]   then I put my hands up in there, it's like,
+[00:33:17.270 --> 00:33:18.430]   what am I gonna do?
+[00:33:18.430 --> 00:33:19.590]   Let's just roll with it.
+[00:33:19.590 --> 00:33:22.510]   - That's right, that's right, roll with it.
+[00:33:22.510 --> 00:33:24.270]   Big wave coming in, surf it.
+[00:33:24.270 --> 00:33:27.590]   - So eventually just, at least in my head right now,
+[00:33:27.590 --> 00:33:29.390]   the way I'm making peace with it is,
+[00:33:29.390 --> 00:33:34.070]   humans somehow figured out a way to evolve
+[00:33:34.070 --> 00:33:35.990]   with circumstances changing.
+[00:33:35.990 --> 00:33:38.230]   This is one of the circumstances,
+[00:33:38.230 --> 00:33:39.950]   maybe a bigger one than others.
+[00:33:39.950 --> 00:33:44.550]   And where some of the skills matter till now,
+[00:33:44.550 --> 00:33:46.390]   which may not be relevant anymore,
+[00:33:46.390 --> 00:33:49.070]   like memorizing stuff, for example.
+[00:33:49.070 --> 00:33:50.910]   I don't know about many people growing up,
+[00:33:50.910 --> 00:33:54.150]   but at least back in India when we were growing up,
+[00:33:54.150 --> 00:33:57.270]   the kid who remembered names,
+[00:33:57.270 --> 00:33:58.430]   the kid who remembered numbers,
+[00:33:58.430 --> 00:34:00.270]   the kid who could do some of these things,
+[00:34:00.270 --> 00:34:02.510]   like, oh, I can look at that car's number plate
+[00:34:02.510 --> 00:34:04.270]   and know exactly whose car that is.
+[00:34:04.270 --> 00:34:07.870]   Like, these kind of stupid games used to matter in a way,
+[00:34:07.870 --> 00:34:10.190]   but at this point, like, memory, do you care?
+[00:34:10.190 --> 00:34:12.470]   Like, write it up, make a generation.
+[00:34:12.580 --> 00:34:14.260]   - And we're tight, pride is still,
+[00:34:14.260 --> 00:34:16.500]   still we're tight, pride of 50 decimal places
+[00:34:16.500 --> 00:34:17.980]   'cause I learned it, you know, in fifth grade.
+[00:34:17.980 --> 00:34:19.740]   - Exactly, so like, these kind of things
+[00:34:19.740 --> 00:34:20.900]   may not matter anymore,
+[00:34:20.900 --> 00:34:22.860]   but I guess there will be different things
+[00:34:22.860 --> 00:34:25.660]   that will matter, similar to not having to worry
+[00:34:25.660 --> 00:34:28.140]   about swimming, like you said, but riding the boat
+[00:34:28.140 --> 00:34:28.980]   and what that looks like.
+[00:34:28.980 --> 00:34:31.180]   - That's right, we're leveling up,
+[00:34:31.180 --> 00:34:33.500]   we're leveling up, that's what's happening.
+[00:34:33.500 --> 00:34:34.980]   Like I said before, we were swimming
+[00:34:34.980 --> 00:34:36.740]   and now we're driving a boat.
+[00:34:36.740 --> 00:34:39.220]   - So you're not just driving the boat,
+[00:34:39.220 --> 00:34:43.180]   you're building one too, talking about building
+[00:34:43.180 --> 00:34:45.260]   air products, some time back.
+[00:34:45.260 --> 00:34:46.940]   So you joined Sourcegraph, I think,
+[00:34:46.940 --> 00:34:50.660]   towards the end of 2022, if I remember it correctly.
+[00:34:50.660 --> 00:34:52.340]   You joined as head of engineering
+[00:34:52.340 --> 00:34:57.220]   and then you transitioned to being an individual contributor
+[00:34:57.220 --> 00:35:02.060]   working on CODI, which is Sourcegraph's AI core assistant.
+[00:35:02.060 --> 00:35:04.660]   Can you tell us a little more about that transition?
+[00:35:04.660 --> 00:35:08.420]   - Sure, it's not the first time I've done transitions
+[00:35:08.420 --> 00:35:10.180]   like that in my career.
+[00:35:10.180 --> 00:35:12.820]   I worked my way up at Amazon at one point
+[00:35:12.820 --> 00:35:16.420]   to a senior manager and then just handed it off
+[00:35:16.420 --> 00:35:18.540]   to one of my directs, 'cause she was enjoying it
+[00:35:18.540 --> 00:35:19.900]   more than I was, right?
+[00:35:19.900 --> 00:35:26.140]   There's a lot of people side of management
+[00:35:26.140 --> 00:35:30.820]   that a lot of people thrive on and they love it
+[00:35:30.820 --> 00:35:32.500]   and they wanna mentor people
+[00:35:32.500 --> 00:35:34.980]   and they wanna guide their careers and blah, blah, blah.
+[00:35:34.980 --> 00:35:37.740]   For me, I've done that for a long time
+[00:35:37.740 --> 00:35:40.860]   and for me, these days, it's more about what can I build
+[00:35:40.860 --> 00:35:43.060]   and how fast can I build it, right?
+[00:35:43.060 --> 00:35:47.220]   And I would've been fine to stay
+[00:35:47.220 --> 00:35:48.500]   in the head of engineering role,
+[00:35:48.500 --> 00:35:51.100]   except that AI was so new and so different
+[00:35:51.100 --> 00:35:55.300]   and I was doing so much non-engineering stuff in my role
+[00:35:55.300 --> 00:35:58.340]   that I was starting to feel like I was never gonna catch up
+[00:35:58.340 --> 00:35:59.900]   and I started getting worried, right?
+[00:35:59.900 --> 00:36:03.140]   Because for example, I never could have written
+[00:36:03.140 --> 00:36:07.100]   Death of a Junior Developer, that post,
+[00:36:07.100 --> 00:36:09.620]   had I not made that transition and been coding
+[00:36:09.620 --> 00:36:11.020]   like the whole first half of this year
+[00:36:11.020 --> 00:36:15.380]   as an actual engineer, like helping us get the product out
+[00:36:15.380 --> 00:36:18.820]   and I'm so happy I did, right?
+[00:36:18.820 --> 00:36:21.740]   And now I can see, I can see where it's going in a way
+[00:36:21.740 --> 00:36:23.660]   that I never would have been able to see that
+[00:36:23.660 --> 00:36:25.300]   in a management leadership role.
+[00:36:25.300 --> 00:36:27.460]   Now, will I go back into leadership someday?
+[00:36:27.460 --> 00:36:29.620]   That maybe, possibly, right?
+[00:36:29.620 --> 00:36:32.380]   But I mean, with this AI stuff, 'cause like you said,
+[00:36:32.380 --> 00:36:36.500]   we're building the boat, it is the time of my life
+[00:36:36.500 --> 00:36:38.820]   and I'm not exaggerating the slightest.
+[00:36:38.820 --> 00:36:40.020]   I thought about this.
+[00:36:40.020 --> 00:36:41.980]   I've had some pretty darn good times in my life
+[00:36:41.980 --> 00:36:44.140]   that this is it, this is the best
+[00:36:44.140 --> 00:36:46.980]   in terms of just my professional career,
+[00:36:46.980 --> 00:36:48.700]   having a lot of fun, right?
+[00:36:48.700 --> 00:36:52.620]   Because there's a, I vlogged about this a long, long time ago.
+[00:36:52.620 --> 00:36:54.460]   I think it was called Dreaming and Browser Swamp
+[00:36:54.460 --> 00:36:56.140]   or something like that, but it was basically like
+[00:36:56.140 --> 00:36:58.180]   I was talking about this feedback loop that you get into
+[00:36:58.180 --> 00:37:00.580]   when you're building an IDE or an editor or something
+[00:37:00.580 --> 00:37:03.940]   where as you build it, you're making yourself faster
+[00:37:03.940 --> 00:37:05.700]   and it's so addictive, yeah?
+[00:37:05.700 --> 00:37:07.020]   And that's what we're, and we're doing it,
+[00:37:07.020 --> 00:37:08.980]   we're doing it with Cody now
+[00:37:08.980 --> 00:37:12.060]   and everything that we do is wiring up
+[00:37:12.060 --> 00:37:15.100]   this deeper and deeper integration with the LLM
+[00:37:15.100 --> 00:37:18.540]   and there's nothing like it, right?
+[00:37:18.540 --> 00:37:19.940]   You're just like, you're running.
+[00:37:19.940 --> 00:37:23.380]   It's like you're in a personal hovercraft or something
+[00:37:23.380 --> 00:37:26.580]   and you wonder where's it gonna lead?
+[00:37:26.580 --> 00:37:27.580]   Where's it gonna go?
+[00:37:27.580 --> 00:37:29.820]   Because not only are the engineering, the tools
+[00:37:29.820 --> 00:37:31.340]   and the protocols and stuff getting better,
+[00:37:31.340 --> 00:37:34.060]   the models themselves are also getting way, way better,
+[00:37:34.060 --> 00:37:36.260]   really fast 'cause of the competition.
+[00:37:36.260 --> 00:37:38.740]   And so, probably this time yet next year,
+[00:37:38.740 --> 00:37:41.260]   it'll be commonplace to have models and workflows
+[00:37:41.260 --> 00:37:45.820]   that span big graphs where you've gotta get
+[00:37:45.820 --> 00:37:48.700]   an application built and the tests and the CI/CD
+[00:37:48.700 --> 00:37:50.460]   and you've gotta get it deployed
+[00:37:50.460 --> 00:37:51.820]   and maybe even look at the logs.
+[00:37:51.820 --> 00:37:53.740]   And we're finally at a point where you can expect
+[00:37:53.740 --> 00:37:55.540]   a lot of that stuff to get done for you
+[00:37:55.540 --> 00:37:59.180]   in a couple of passes with the tools that we'll have.
+[00:37:59.180 --> 00:38:00.740]   With a couple of years after that,
+[00:38:00.740 --> 00:38:04.620]   I mean, this is what I'm saying.
+[00:38:04.620 --> 00:38:07.260]   What happens to all the, I mean,
+[00:38:07.260 --> 00:38:11.660]   anybody who's doing old-style programming, whew.
+[00:38:11.660 --> 00:38:12.980]   - Gotta become a shop engineer.
+[00:38:12.980 --> 00:38:15.820]   So-- - Gotta go need shop.
+[00:38:15.820 --> 00:38:20.100]   - There's a lot of things I wanna dive a little deeper into.
+[00:38:20.100 --> 00:38:22.740]   - Sure. - Before we go there,
+[00:38:22.740 --> 00:38:26.580]   you said just building CODI is like you having
+[00:38:26.580 --> 00:38:28.540]   the time of your life.
+[00:38:28.540 --> 00:38:30.420]   What's different about building AI products
+[00:38:30.420 --> 00:38:32.860]   than it is to build something else?
+[00:38:32.860 --> 00:38:35.300]   And you've built a lot of things in your career.
+[00:38:35.300 --> 00:38:42.500]   - I mean, like, it's the, look, it's like driving.
+[00:38:42.500 --> 00:38:47.340]   Like, the number of red lights that you hit
+[00:38:47.340 --> 00:38:50.020]   has a big impact on your sort of perception of growth.
+[00:38:50.020 --> 00:38:52.060]   - Absolutely. - The ride, right?
+[00:38:52.060 --> 00:38:54.420]   And like when I was programming in the '90s,
+[00:38:54.420 --> 00:38:57.100]   if you got stuck on something, you could expect
+[00:38:57.100 --> 00:39:00.100]   that it might take you days to weeks to get it figured out
+[00:39:00.100 --> 00:39:02.180]   'cause you'd have to go look in books or try things
+[00:39:02.180 --> 00:39:03.740]   or work with colleagues or whatever, right?
+[00:39:03.740 --> 00:39:06.820]   And so it just like, it was like we were in slow motion
+[00:39:06.820 --> 00:39:08.380]   and it's gradually beginning faster.
+[00:39:08.380 --> 00:39:10.300]   Google search made it a lot easier to find stuff
+[00:39:10.300 --> 00:39:13.220]   and then Stack Overflow made it like even easier.
+[00:39:13.220 --> 00:39:15.780]   Like you start asking people stuff and getting answers.
+[00:39:15.780 --> 00:39:17.900]   Each one of those was a big accelerator, yeah?
+[00:39:17.900 --> 00:39:21.380]   And each one of them made programming more fun, didn't it?
+[00:39:21.380 --> 00:39:22.220]   - Oh, absolutely.
+[00:39:22.220 --> 00:39:25.300]   - I mean, if you went through any of those transformations
+[00:39:25.300 --> 00:39:28.500]   and cloud computing, I think made programming more fun.
+[00:39:28.500 --> 00:39:29.980]   I mean, yeah, it's a pain,
+[00:39:29.980 --> 00:39:31.620]   but it was a lot more fun than running.
+[00:39:31.620 --> 00:39:34.900]   I had my own computer in a data center in downtown Seattle
+[00:39:34.900 --> 00:39:36.540]   and when my game would go down,
+[00:39:36.540 --> 00:39:39.220]   sometimes it was because the computer like wouldn't reboot
+[00:39:39.220 --> 00:39:41.300]   and I had to like go in the middle of the night
+[00:39:41.300 --> 00:39:43.940]   and get a keycard and reboot a server on the 13th floor
+[00:39:43.940 --> 00:39:46.020]   of this horrible, hot building.
+[00:39:46.020 --> 00:39:48.860]   I mean, cloud computing was a real, real level up for us,
+[00:39:48.860 --> 00:39:50.300]   right?
+[00:39:50.300 --> 00:39:51.660]   And this is no different, right?
+[00:39:51.660 --> 00:39:54.260]   This is like, wow, this is a huge level up.
+[00:39:54.260 --> 00:39:56.220]   It's a toy, it's a fun toy.
+[00:39:56.220 --> 00:39:58.580]   It's like you can make it do things and you're like,
+[00:39:58.580 --> 00:40:00.660]   well, I've been doing this for six months now
+[00:40:00.660 --> 00:40:03.860]   and I still didn't know it could do these things, you know?
+[00:40:03.860 --> 00:40:06.100]   So that's kind of like where I'm at right now.
+[00:40:06.100 --> 00:40:08.900]   That's why I think it's like time in my life.
+[00:40:08.900 --> 00:40:11.500]   It's like, because programmers,
+[00:40:11.500 --> 00:40:14.380]   we like to build things that people use.
+[00:40:14.380 --> 00:40:16.380]   We build things that have an impact
+[00:40:16.380 --> 00:40:20.500]   and that gives us that dopamine cycle, right?
+[00:40:20.500 --> 00:40:23.500]   And so if you're speeding that up, it's getting more addictive.
+[00:40:24.580 --> 00:40:27.060]   - Speaking of that history,
+[00:40:27.060 --> 00:40:29.620]   so you were actually retired
+[00:40:29.620 --> 00:40:32.100]   before coming back to a social graph.
+[00:40:32.100 --> 00:40:34.500]   And you mentioned before you transitioned
+[00:40:34.500 --> 00:40:36.780]   from like management to IC.
+[00:40:36.780 --> 00:40:41.620]   I'm curious like, what are some of the skills
+[00:40:41.620 --> 00:40:43.500]   that are really useful in just picking up
+[00:40:43.500 --> 00:40:45.180]   like a completely new domain, right?
+[00:40:45.180 --> 00:40:46.980]   Like all this stuff didn't exist, right?
+[00:40:46.980 --> 00:40:49.060]   Like the last time that you were like, you know,
+[00:40:49.060 --> 00:40:50.100]   like doing coding.
+[00:40:50.100 --> 00:40:52.940]   So then like, yeah, like how do you go about
+[00:40:52.940 --> 00:40:54.820]   when diving into like a completely new domain?
+[00:40:54.820 --> 00:40:57.020]   Like, what do you do?
+[00:40:57.020 --> 00:41:00.380]   - You know, there's an interesting question
+[00:41:00.380 --> 00:41:01.580]   behind your question.
+[00:41:01.580 --> 00:41:03.260]   I feel like lurking there, right?
+[00:41:03.260 --> 00:41:04.100]   Which is the--
+[00:41:04.100 --> 00:41:06.420]   - Please help me up if that is a question.
+[00:41:06.420 --> 00:41:08.580]   - Well, I mean, like it's related to something
+[00:41:08.580 --> 00:41:09.580]   we talked about earlier, right?
+[00:41:09.580 --> 00:41:12.180]   Which is, if I'm going into software engineering,
+[00:41:12.180 --> 00:41:14.780]   should I be going into software engineering, right?
+[00:41:18.740 --> 00:41:23.740]   So I guess, let me just make absolutely sure,
+[00:41:23.740 --> 00:41:27.140]   state your question one more time
+[00:41:27.140 --> 00:41:29.700]   and make sure I'm gonna answer the right one.
+[00:41:29.700 --> 00:41:33.180]   - Sorry, when you go into a new domain,
+[00:41:33.180 --> 00:41:35.740]   like building AI product now with Cody,
+[00:41:35.740 --> 00:41:40.260]   like how do you go about picking up the new skills
+[00:41:40.260 --> 00:41:41.820]   that are relevant to building it?
+[00:41:41.820 --> 00:41:46.740]   - Yeah, when AI came out,
+[00:41:46.740 --> 00:41:49.420]   a lot of the folks that I worked with
+[00:41:49.420 --> 00:41:51.420]   didn't wanna have anything to do with it.
+[00:41:51.420 --> 00:41:54.380]   Like they just didn't, they weren't interested.
+[00:41:54.380 --> 00:41:57.660]   - This must be an outside source graph or an outside source graph?
+[00:41:57.660 --> 00:42:00.380]   - Both, both.
+[00:42:00.380 --> 00:42:04.260]   And they just, you know, because maybe it was a misconception.
+[00:42:04.260 --> 00:42:07.100]   They didn't know that it wasn't like,
+[00:42:07.100 --> 00:42:08.540]   we had a bunch of PyTorch anymore.
+[00:42:08.540 --> 00:42:11.820]   It was, there was an engineering involved now.
+[00:42:11.820 --> 00:42:13.260]   But for whatever reason, you know,
+[00:42:13.260 --> 00:42:17.500]   a lot of people feel like the entry into this new domain
+[00:42:17.500 --> 00:42:19.980]   is actually so steep that they're scared of it
+[00:42:19.980 --> 00:42:23.460]   or they're worried or they're just putting it off.
+[00:42:23.460 --> 00:42:27.060]   And so like, seriously, I mean, like,
+[00:42:27.060 --> 00:42:28.300]   getting into a new domain,
+[00:42:28.300 --> 00:42:31.460]   I mean, the best thing you can do is be young.
+[00:42:31.460 --> 00:42:32.380]   I'll tell you that right now.
+[00:42:32.380 --> 00:42:33.500]   It's harder for me.
+[00:42:33.500 --> 00:42:37.500]   And so like when I got to learn new programming language,
+[00:42:37.500 --> 00:42:40.220]   I can't just like read the book in two hours
+[00:42:40.220 --> 00:42:41.540]   and like know the programming language
+[00:42:41.540 --> 00:42:43.460]   like I could 20 years ago.
+[00:42:43.460 --> 00:42:45.580]   So that helps like just spend the time while you're,
+[00:42:45.580 --> 00:42:48.940]   you know, while you're young, learn as much as you can.
+[00:42:48.940 --> 00:42:51.420]   But seriously, I mean, like,
+[00:42:51.420 --> 00:42:54.300]   don't be afraid of new domains.
+[00:42:54.300 --> 00:42:56.500]   I mean, we're all kind of reinventing our jobs
+[00:42:56.500 --> 00:42:58.260]   kind of all the time anyway.
+[00:42:58.260 --> 00:43:02.740]   And this is necessitating that we all reinvent our jobs
+[00:43:02.740 --> 00:43:05.020]   as prompt engineers, yeah?
+[00:43:05.020 --> 00:43:06.300]   Even if you're doing regular programming,
+[00:43:06.300 --> 00:43:08.180]   you're gonna, I mean, if you're gonna have to do
+[00:43:08.180 --> 00:43:11.820]   a fair amount of prompt engineering from now on, right?
+[00:43:11.820 --> 00:43:13.060]   So how do you learn it?
+[00:43:13.060 --> 00:43:15.900]   Well, I mean, gosh, there's so many more resources now
+[00:43:15.900 --> 00:43:17.100]   than there used to be, right?
+[00:43:17.100 --> 00:43:19.700]   I mean, but you know what I would do?
+[00:43:19.700 --> 00:43:22.940]   I'd use CHOP to figure it out.
+[00:43:22.940 --> 00:43:26.380]   I'd go into, I'd go into Emacs or chat GPT or whatever,
+[00:43:26.380 --> 00:43:29.060]   go into CODI when I'd start asking there.
+[00:43:29.060 --> 00:43:31.140]   Because why bother with Google searches anymore?
+[00:43:31.140 --> 00:43:32.980]   You need to get summaries from the AI, right?
+[00:43:32.980 --> 00:43:36.460]   The AI knows how to even like present it to you
+[00:43:36.460 --> 00:43:37.340]   at your level.
+[00:43:37.340 --> 00:43:38.940]   You can say, "I'm a complete newbie."
+[00:43:38.940 --> 00:43:40.660]   Or, "I actually more similar domains."
+[00:43:40.660 --> 00:43:42.300]   Can you like compare it to that?
+[00:43:42.300 --> 00:43:44.980]   So like the way, so the answer to your question
+[00:43:44.980 --> 00:43:47.020]   is different than it was a year ago.
+[00:43:47.020 --> 00:43:48.780]   How you ramp up in a new domain
+[00:43:48.780 --> 00:43:51.460]   is you go ask the hell I don't know about it.
+[00:43:51.460 --> 00:43:52.740]   That's my opinion.
+[00:43:52.740 --> 00:43:54.620]   It'll make you a better engineer, right?
+[00:43:54.620 --> 00:43:56.460]   Because there's a lot of nuance.
+[00:43:56.460 --> 00:43:58.180]   There's a lot of tricks.
+[00:43:58.180 --> 00:43:59.000]   You know what?
+[00:43:59.000 --> 00:44:00.460]   There's a lot of people out there today
+[00:44:00.460 --> 00:44:02.620]   who still possibly listening to this podcast.
+[00:44:02.620 --> 00:44:06.100]   Yes, you, who think that like CHOP is not a thing
+[00:44:06.100 --> 00:44:09.060]   because they asked the LLM to write some tests for him
+[00:44:09.060 --> 00:44:11.940]   and the tests were wrong and therefore LLMs are dumb.
+[00:44:11.940 --> 00:44:13.980]   Which is just like saying, you know,
+[00:44:13.980 --> 00:44:14.860]   I did a Google search
+[00:44:14.860 --> 00:44:15.940]   and it didn't come up with the right answer.
+[00:44:15.940 --> 00:44:18.140]   So Google's dumb, right?
+[00:44:18.140 --> 00:44:19.260]   I'll tell you who's dumb there.
+[00:44:19.260 --> 00:44:20.380]   It's not Google.
+[00:44:20.380 --> 00:44:24.100]   And it's because people don't realize that fundamentally,
+[00:44:24.100 --> 00:44:26.460]   I mean, you have to still be patient and persistent
+[00:44:26.460 --> 00:44:28.820]   and make it your own when you're doing CHOP.
+[00:44:28.820 --> 00:44:31.340]   So you have multiple questions around CHOPs with the LLM,
+[00:44:31.340 --> 00:44:32.180]   right?
+[00:44:32.180 --> 00:44:33.420]   People aren't doing that, right?
+[00:44:33.420 --> 00:44:34.260]   They're not doing that.
+[00:44:34.260 --> 00:44:36.980]   That's, I mean, fundamentally prompt engineering.
+[00:44:36.980 --> 00:44:40.300]   And I'm not as scared.
+[00:44:40.300 --> 00:44:41.500]   If you go back and look at my,
+[00:44:41.500 --> 00:44:43.980]   if you seriously, you go back and look at my chat history
+[00:44:43.980 --> 00:44:47.260]   in Gemini, in Claude, and in chat GPT.
+[00:44:47.260 --> 00:44:50.620]   You'll see that I am ramping up on new domains
+[00:44:50.620 --> 00:44:53.420]   right there in place as I'm coding.
+[00:44:53.420 --> 00:44:55.500]   Haven't used web sockets in 12 years.
+[00:44:55.500 --> 00:44:57.900]   Let's go through the fundamentals again, right?
+[00:44:57.900 --> 00:45:00.140]   Oh man, I haven't used windows in 15 years.
+[00:45:00.140 --> 00:45:02.300]   Walk me through how I like install it.
+[00:45:02.300 --> 00:45:04.820]   I mean, literally anything you wanna know,
+[00:45:04.820 --> 00:45:07.220]   you literally ask the LLM while you're coding.
+[00:45:07.220 --> 00:45:10.700]   And so everything that you're doing becomes this like,
+[00:45:10.700 --> 00:45:13.060]   it's in a blender, it's blurred together.
+[00:45:13.060 --> 00:45:15.180]   You're working and doing all the things that you need
+[00:45:15.180 --> 00:45:18.700]   with the assistance of your coding assistant, your LLM.
+[00:45:18.700 --> 00:45:20.620]   And you're cranking out a bunch of code,
+[00:45:20.620 --> 00:45:23.220]   but you're not the one writing most of it.
+[00:45:23.220 --> 00:45:24.340]   Do you guys do this?
+[00:45:24.340 --> 00:45:26.940]   - There's like a bit of a cycle for me as well,
+[00:45:26.940 --> 00:45:29.620]   where at some point I was kind of like,
+[00:45:29.620 --> 00:45:32.900]   that meme of like, can't tell if the LLM is really bad
+[00:45:32.900 --> 00:45:35.460]   or I'm just really bad at prompting the LLM.
+[00:45:35.460 --> 00:45:37.620]   And usually things don't matter.
+[00:45:37.620 --> 00:45:40.260]   So it took me a while I think to learn like,
+[00:45:40.260 --> 00:45:43.340]   oh yeah, I need to really be strategic.
+[00:45:43.340 --> 00:45:45.420]   And then I think to a point,
+[00:45:45.420 --> 00:45:48.500]   like in terms of reducing red lights,
+[00:45:48.500 --> 00:45:50.020]   one thing I really realized it was like,
+[00:45:50.020 --> 00:45:51.820]   oh, if my prompt is bad,
+[00:45:51.820 --> 00:45:54.020]   I can just ask the LLM to improve the prompt.
+[00:45:54.020 --> 00:45:56.800]   I think that was like the biggest unlock where I was like,
+[00:45:56.800 --> 00:46:00.100]   oh shit, this is like way better than what I would have asked
+[00:46:00.100 --> 00:46:04.280]   it so yeah, it's been pretty big.
+[00:46:04.280 --> 00:46:07.980]   - Yeah, I read papers on prompt engineering,
+[00:46:07.980 --> 00:46:10.460]   you know, all the time and that's a new one, right?
+[00:46:10.460 --> 00:46:13.940]   It's rephrase and expand.
+[00:46:13.940 --> 00:46:16.460]   Tell it and you'll get a better prompt.
+[00:46:16.460 --> 00:46:19.340]   But what I found honestly, truthfully okay,
+[00:46:19.340 --> 00:46:23.060]   is that I get good results without resorting
+[00:46:23.060 --> 00:46:26.220]   to special prompt engineering techniques.
+[00:46:26.220 --> 00:46:29.200]   Models are good enough now that just a regular conversation
+[00:46:29.200 --> 00:46:33.020]   with the right context gives it everything that it needs.
+[00:46:33.020 --> 00:46:36.220]   And the context arguably is more important than the prompt.
+[00:46:36.220 --> 00:46:39.700]   In my opinion, because look, it's gonna get,
+[00:46:39.700 --> 00:46:41.060]   I mean, like you want prompt engineering,
+[00:46:41.060 --> 00:46:42.560]   like you want it to be really, really, really good
+[00:46:42.560 --> 00:46:45.220]   if it's doing some very specific task for you.
+[00:46:45.220 --> 00:46:46.700]   Of course, you want the prompt to be really good.
+[00:46:46.700 --> 00:46:48.460]   Like if it's the right unit test prompt,
+[00:46:48.460 --> 00:46:50.200]   we're gonna put a lot of work into that.
+[00:46:50.200 --> 00:46:53.080]   But for solving any given random problem
+[00:46:53.080 --> 00:46:54.300]   that you're doing during the day,
+[00:46:54.300 --> 00:46:56.220]   it's a throwaway prompt.
+[00:46:56.220 --> 00:46:59.020]   So you don't really need to put that much effort into it.
+[00:46:59.020 --> 00:47:02.180]   And instead, what you gotta do is you just gotta recognize
+[00:47:02.180 --> 00:47:04.860]   that some of the time it's gonna just make stuff up.
+[00:47:04.860 --> 00:47:07.820]   And you'd be like, no, no, no, that's made up.
+[00:47:07.820 --> 00:47:09.940]   And it'll be, oh, apologies for the confusion
+[00:47:09.940 --> 00:47:11.820]   or whatever they tell it to say these days, right?
+[00:47:11.820 --> 00:47:14.180]   But you just steamroll past that.
+[00:47:14.180 --> 00:47:15.260]   You're like, nope, that didn't work.
+[00:47:15.260 --> 00:47:16.100]   Nope, that didn't work.
+[00:47:16.100 --> 00:47:17.900]   Until the thing that does the thing that you want.
+[00:47:17.900 --> 00:47:19.900]   And if it starts to go into that circle, you mentioned this,
+[00:47:19.900 --> 00:47:21.900]   sometimes it'll start giving you the run around
+[00:47:21.900 --> 00:47:25.460]   and realize the model cannot make any forward progress.
+[00:47:25.460 --> 00:47:27.140]   Just treat it like a chess match, right?
+[00:47:27.140 --> 00:47:29.700]   If you hit the same position like three times and still,
+[00:47:29.700 --> 00:47:31.500]   go take the whole conversation
+[00:47:31.500 --> 00:47:34.460]   and take it to the next LLM over, right?
+[00:47:34.460 --> 00:47:35.820]   Just go on a circle and say,
+[00:47:35.820 --> 00:47:37.540]   this LLM is having a lot of trouble.
+[00:47:37.540 --> 00:47:39.700]   And the other LLM will be like, they sure are.
+[00:47:39.700 --> 00:47:40.700]   Here's your problem.
+[00:47:40.700 --> 00:47:42.000]   And they'll like tell it all to you, right?
+[00:47:42.000 --> 00:47:43.460]   It's so cool.
+[00:47:43.460 --> 00:47:45.820]   It's kind of like the magic property of second hashing,
+[00:47:45.820 --> 00:47:47.100]   right, secondary hashing.
+[00:47:47.100 --> 00:47:50.220]   Second hash function almost never, ever, ever has a collision
+[00:47:50.220 --> 00:47:51.560]   just 'cause, you know, 'cause the odds.
+[00:47:51.560 --> 00:47:54.580]   And it's just awesome that you can go to a second LLM
+[00:47:54.580 --> 00:47:56.300]   and pretty much always get the answer
+[00:47:56.300 --> 00:47:57.980]   that you were missing the first time around.
+[00:47:57.980 --> 00:47:59.860]   - Oh, I've never tried that.
+[00:47:59.860 --> 00:48:01.100]   - You go a third LLM.
+[00:48:01.100 --> 00:48:03.660]   - Interesting, I need to try that.
+[00:48:03.660 --> 00:48:05.000]   Oh, very cool.
+[00:48:05.000 --> 00:48:06.680]   - Dude, this is a chop technique.
+[00:48:06.680 --> 00:48:07.520]   There's a bunch of it.
+[00:48:07.520 --> 00:48:09.500]   I'm starting to do some videos on it and whatever.
+[00:48:09.500 --> 00:48:11.300]   It's like, there's an art to it.
+[00:48:11.300 --> 00:48:13.180]   - Should do a post on chop techniques, I think.
+[00:48:13.180 --> 00:48:15.940]   That'll be super helpful for a lot of people out there.
+[00:48:15.940 --> 00:48:18.480]   - That is one of my completed drafts
+[00:48:18.480 --> 00:48:20.640]   that needs to be rewritten to be funnier.
+[00:48:20.640 --> 00:48:21.800]   But yeah, it's ready to go.
+[00:48:21.800 --> 00:48:22.640]   - Awesome.
+[00:48:22.640 --> 00:48:26.380]   So one thing that you mentioned,
+[00:48:26.380 --> 00:48:28.340]   there's a lot more engineering to this now,
+[00:48:28.340 --> 00:48:29.680]   to building AI products.
+[00:48:29.680 --> 00:48:33.980]   I was curious, generally when you talk to a lot of people
+[00:48:33.980 --> 00:48:37.840]   who are not building AI products, are software engineers,
+[00:48:37.840 --> 00:48:41.760]   they also have this FOMO of like, hey, kind of missing out.
+[00:48:41.760 --> 00:48:44.180]   But you know, I'm not a machine learning engineer
+[00:48:44.180 --> 00:48:46.700]   and they may not have the right opportunity
+[00:48:46.700 --> 00:48:49.220]   either at their own job or they can't find one these days
+[00:48:49.220 --> 00:48:50.760]   because it's generally harder.
+[00:48:50.760 --> 00:48:54.000]   But just to put things in context,
+[00:48:54.000 --> 00:48:56.240]   building AI products at this point
+[00:48:56.240 --> 00:48:59.960]   where you're not necessarily training an LLM yourself,
+[00:48:59.960 --> 00:49:02.440]   but let's say you're building something like CODI,
+[00:49:02.440 --> 00:49:03.980]   how much engineering work is that
+[00:49:03.980 --> 00:49:06.900]   versus how much researchy work is that?
+[00:49:06.900 --> 00:49:11.440]   - You get to decide where to turn that dial.
+[00:49:11.440 --> 00:49:14.920]   I mean, it is a dial.
+[00:49:14.920 --> 00:49:18.220]   And I mean, look, why is that the case?
+[00:49:18.220 --> 00:49:22.520]   It's because there is sort of like infinite low hanging fruit
+[00:49:22.520 --> 00:49:24.200]   in the space right now.
+[00:49:24.200 --> 00:49:26.200]   I mean, really low hanging fruit.
+[00:49:26.200 --> 00:49:29.240]   Like we're like even just, I think two weeks ago,
+[00:49:29.240 --> 00:49:31.760]   I was in Krakow in Poland for, we did a hackathon,
+[00:49:31.760 --> 00:49:33.520]   a Europe hackathon, right?
+[00:49:33.520 --> 00:49:36.840]   And I realized, one of our teammates, we were chatting
+[00:49:36.840 --> 00:49:38.600]   and we realized that nobody has gone
+[00:49:38.600 --> 00:49:40.480]   and fixed our chunking for embeddings.
+[00:49:40.480 --> 00:49:42.520]   And it's been a year and we still don't,
+[00:49:42.520 --> 00:49:43.880]   like an embedding will literally,
+[00:49:43.880 --> 00:49:45.800]   like the chunk will be from the middle of one function
+[00:49:45.800 --> 00:49:47.200]   to the middle of another function,
+[00:49:47.200 --> 00:49:50.040]   which is just totally useless for the LLM, right?
+[00:49:50.040 --> 00:49:52.880]   This is a low, low, low hanging fruit, right?
+[00:49:52.880 --> 00:49:55.720]   Of course we fixed that, yes, sorry, you know,
+[00:49:55.720 --> 00:49:57.560]   and we have lots of other things besides embeddings
+[00:49:57.560 --> 00:49:59.920]   that can get us indexes, but you get the idea, right?
+[00:49:59.920 --> 00:50:04.920]   It's just like the road is so clearly set out for you.
+[00:50:04.920 --> 00:50:08.020]   It's so obvious what to do.
+[00:50:08.020 --> 00:50:09.700]   There's too much to do.
+[00:50:09.700 --> 00:50:11.800]   And so you gotta decide, okay, all right,
+[00:50:11.800 --> 00:50:13.720]   how are we gonna allocate our resources?
+[00:50:13.720 --> 00:50:16.560]   This is a strategic sort of battle.
+[00:50:16.560 --> 00:50:18.320]   Early on in the game, like last year,
+[00:50:18.320 --> 00:50:20.580]   I thought we were gonna like really double down hard
+[00:50:20.580 --> 00:50:24.420]   on the AI side, you know, and we've got a great AI team
+[00:50:24.420 --> 00:50:27.120]   and they're doing great stuff, fine tuning
+[00:50:27.120 --> 00:50:28.800]   and eliminating bias from models.
+[00:50:28.800 --> 00:50:30.960]   And they've got a trained context ranker
+[00:50:30.960 --> 00:50:35.020]   because what we found ultimately was the biggest bang
+[00:50:35.020 --> 00:50:38.320]   for the buck that you get in the coding assistant space,
+[00:50:38.320 --> 00:50:41.160]   aside from the LLM itself, okay, the biggest bang
+[00:50:41.160 --> 00:50:42.760]   for the buck you're gonna get is
+[00:50:45.340 --> 00:50:47.620]   it's not the fine tuning models, right?
+[00:50:47.620 --> 00:50:52.380]   And it's not the prompt engineering, it's your context.
+[00:50:52.380 --> 00:50:56.200]   Okay, because you get a lot of tokens.
+[00:50:56.200 --> 00:50:57.960]   You don't get anywhere near enough,
+[00:50:57.960 --> 00:51:01.080]   but you get enough to put a lot of context in there, right?
+[00:51:01.080 --> 00:51:03.640]   And even if you're doing raw chop without a coding assistant,
+[00:51:03.640 --> 00:51:06.020]   if you can just shovel screenshots
+[00:51:06.020 --> 00:51:07.940]   and paste in logs and stuff, right?
+[00:51:07.940 --> 00:51:10.020]   That context means everything
+[00:51:10.020 --> 00:51:12.040]   because every time you talk to the LLM,
+[00:51:12.040 --> 00:51:13.480]   and I think people have trouble
+[00:51:13.480 --> 00:51:15.800]   getting their heads around this, every time,
+[00:51:15.800 --> 00:51:19.040]   you're calling a phone like, you know, around the world.
+[00:51:19.040 --> 00:51:21.000]   and this person's never met you before.
+[00:51:21.000 --> 00:51:23.400]   Hi, I'm a programmer, and you got
+[00:51:23.400 --> 00:51:25.300]   to explain your problem to them and give them
+[00:51:25.300 --> 00:51:26.840]   all the context that they can give you
+[00:51:26.840 --> 00:51:29.680]   the answer every single time, which
+[00:51:29.680 --> 00:51:33.440]   is why coding assistants are actually so useful in this game.
+[00:51:33.440 --> 00:51:37.600]   So you had this blog post cheating is all you need.
+[00:51:37.600 --> 00:51:40.400]   I think it came on sometime last year again.
+[00:51:40.400 --> 00:51:42.080]   One of the other amazing blog posts.
+[00:51:42.080 --> 00:51:44.560]   We'll link it in the show notes and recommend
+[00:51:44.560 --> 00:51:46.100]   people check it out.
+[00:51:46.100 --> 00:51:48.160]   You had this very simplified diagram
+[00:51:48.160 --> 00:51:52.580]   of how Cody works, which could be a diagram for any coding
+[00:51:52.580 --> 00:51:53.580]   assistant for that matter.
+[00:51:53.580 --> 00:51:57.440]   It's like you have a human developer on one side.
+[00:51:57.440 --> 00:51:59.480]   You have the assistant in the middle,
+[00:51:59.480 --> 00:52:04.040]   and then you have an LLM, and you have some source that
+[00:52:04.040 --> 00:52:06.880]   is giving you embeddings, search, et cetera.
+[00:52:06.880 --> 00:52:08.440]   And you tie all of this.
+[00:52:08.440 --> 00:52:09.720]   This is short, rad.
+[00:52:09.720 --> 00:52:11.400]   You do the rad.
+[00:52:11.400 --> 00:52:12.880]   How much of that has changed since then?
+[00:52:16.600 --> 00:52:19.520]   How much of it has changed?
+[00:52:19.520 --> 00:52:23.520]   In other words, rad is still big.
+[00:52:23.520 --> 00:52:24.600]   Everybody's doing rad.
+[00:52:24.600 --> 00:52:27.680]   Rad is well, well known and acknowledged
+[00:52:27.680 --> 00:52:29.320]   to be the right way.
+[00:52:29.320 --> 00:52:31.920]   Because fundamentally, you've got
+[00:52:31.920 --> 00:52:34.960]   to pick the right context to put into the--
+[00:52:34.960 --> 00:52:36.720]   and that's the goal of rad, which
+[00:52:36.720 --> 00:52:40.400]   is to use basically local searches.
+[00:52:40.400 --> 00:52:45.480]   Now, it's definitely expanded in terms
+[00:52:45.480 --> 00:52:47.720]   of the techniques and the approaches and things
+[00:52:47.720 --> 00:52:48.560]   that go under rad.
+[00:52:48.560 --> 00:52:55.040]   Customer of ours introduced me to a really, really interesting
+[00:52:55.040 --> 00:52:57.360]   new kind of source code index, for example,
+[00:52:57.360 --> 00:52:59.440]   that I think we can bring in.
+[00:52:59.440 --> 00:53:00.520]   I've got to go write it up.
+[00:53:00.520 --> 00:53:01.960]   It's just mind-bending.
+[00:53:01.960 --> 00:53:07.160]   And so people are innovating crazy in this space.
+[00:53:07.160 --> 00:53:08.720]   So fundamentally, it hasn't changed.
+[00:53:08.720 --> 00:53:10.180]   So then you've got to ask the question, well,
+[00:53:10.180 --> 00:53:11.680]   if they're all doing the same thing,
+[00:53:11.680 --> 00:53:13.640]   how is your coding assistant differentiated
+[00:53:13.640 --> 00:53:15.160]   from the others?
+[00:53:15.160 --> 00:53:18.280]   And to some extent, we thought we
+[00:53:18.280 --> 00:53:20.360]   were going to maybe differentiate on local AI,
+[00:53:20.360 --> 00:53:23.160]   smaller models, like we do with our context ranking.
+[00:53:23.160 --> 00:53:25.360]   So to the extent that you can do that with rad,
+[00:53:25.360 --> 00:53:27.440]   yeah, we can differentiate, and we are.
+[00:53:27.440 --> 00:53:29.560]   But for the most part, the effect
+[00:53:29.560 --> 00:53:31.960]   of the actual foundation models in each generation
+[00:53:31.960 --> 00:53:34.560]   is so overwhelming compared to the other stuff
+[00:53:34.560 --> 00:53:37.720]   that you're doing that you pretty much just got to decide,
+[00:53:37.720 --> 00:53:40.560]   OK, how am I going to ride this train to maximize value
+[00:53:40.560 --> 00:53:44.040]   for ultimately myself and building this for me,
+[00:53:44.040 --> 00:53:47.200]   for programmers?
+[00:53:47.200 --> 00:53:51.360]   And yeah, what we've decided is that chat is the future.
+[00:53:51.360 --> 00:53:52.680]   Chat is where it's at.
+[00:53:52.680 --> 00:53:56.940]   Everybody's been so vocal, so narrowly on it, completion.
+[00:53:56.940 --> 00:53:57.440]   Oh, yeah.
+[00:53:57.440 --> 00:53:59.680]   And I never understood it.
+[00:53:59.680 --> 00:54:01.760]   Completion rate.
+[00:54:01.760 --> 00:54:04.480]   Yeah, and car, yeah, completion, exception's great, right?
+[00:54:04.480 --> 00:54:06.960]   It's just been the industry's been obsessed with it.
+[00:54:06.960 --> 00:54:08.840]   And completions are like, they're OK.
+[00:54:08.840 --> 00:54:10.160]   I mean, they're kind of gimmicky, right?
+[00:54:10.160 --> 00:54:11.080]   I mean, you're coding along.
+[00:54:11.080 --> 00:54:12.000]   All of a sudden, it goes, what?
+[00:54:12.000 --> 00:54:13.000]   And it finishes it for you.
+[00:54:13.000 --> 00:54:15.600]   And you're like, dang, that's pretty clever, you know?
+[00:54:15.600 --> 00:54:19.160]   But that's not, I mean, like, most of what you're doing.
+[00:54:19.160 --> 00:54:21.000]   And most of the time, you're not doing code
+[00:54:21.000 --> 00:54:24.480]   that's conducive to completions in a way that they would help.
+[00:54:24.480 --> 00:54:26.640]   Whereas if you could-- and plus, it's
+[00:54:26.640 --> 00:54:27.920]   hard to guide the completions.
+[00:54:27.920 --> 00:54:29.000]   You get into this mode where you're
+[00:54:29.000 --> 00:54:30.440]   putting comments into the code.
+[00:54:30.440 --> 00:54:32.880]   And I think it picks up on the comments and write.
+[00:54:32.880 --> 00:54:34.760]   So like, there's clearly what you need
+[00:54:34.760 --> 00:54:38.000]   is sort of like prompted completions, right?
+[00:54:38.000 --> 00:54:40.040]   Which we have with inline edits, which
+[00:54:40.040 --> 00:54:41.520]   is a really cool feature, where you just
+[00:54:41.520 --> 00:54:43.360]   type and make these changes to the code.
+[00:54:43.360 --> 00:54:46.000]   And it'll do it, which is sort of like a directed completion.
+[00:54:46.000 --> 00:54:47.560]   And we're even working on some modalities
+[00:54:47.560 --> 00:54:50.640]   kind of between those two, like super completions, right?
+[00:54:50.640 --> 00:54:51.920]   Things like that.
+[00:54:51.920 --> 00:54:56.520]   But again, completion-- they're almost a niche
+[00:54:56.520 --> 00:54:58.600]   compared to how often you use chat
+[00:54:58.600 --> 00:55:03.600]   once you realize that chat covers all phases of programming,
+[00:55:03.600 --> 00:55:07.040]   from the generation of the code to the fixing of the code
+[00:55:07.040 --> 00:55:09.080]   and the diagnosis and the troubleshooting.
+[00:55:09.080 --> 00:55:12.120]   And every part of the lifecycle, chat
+[00:55:12.120 --> 00:55:14.120]   can help you with it and accelerate you.
+[00:55:14.120 --> 00:55:15.560]   And at that point, completions just
+[00:55:15.560 --> 00:55:18.160]   fade into this gimmicky background.
+[00:55:18.160 --> 00:55:21.080]   And I think most people haven't made that transition yet.
+[00:55:21.080 --> 00:55:22.720]   But they will over the next six months.
+[00:55:22.720 --> 00:55:24.560]   And they're going to realize, oh, wow.
+[00:55:24.560 --> 00:55:26.480]   The coding assistants that focused on chat
+[00:55:26.480 --> 00:55:28.600]   are the ones that are going to help me the most.
+[00:55:28.600 --> 00:55:30.760]   And that's what you're going to find.
+[00:55:30.760 --> 00:55:32.720]   So you mentioned this in your blog post, too.
+[00:55:32.720 --> 00:55:36.520]   Like after chat, GPD 4.0 and CLAR 3.5 saw it,
+[00:55:36.520 --> 00:55:39.160]   we saw this huge jump in the performance of coding
+[00:55:39.160 --> 00:55:40.640]   assistants.
+[00:55:40.640 --> 00:55:43.800]   And again, just the understanding of the code base,
+[00:55:43.800 --> 00:55:46.600]   you could ask them to do complex things.
+[00:55:46.600 --> 00:55:49.480]   Like at times, I've asked it to refactor certain methods.
+[00:55:49.480 --> 00:55:51.680]   And before this, you could try.
+[00:55:51.680 --> 00:55:53.840]   I don't know how many loops with how many LLMs.
+[00:55:53.840 --> 00:55:55.880]   And they would just not make progress.
+[00:55:55.880 --> 00:55:58.040]   But now it's been very different.
+[00:55:58.040 --> 00:55:59.960]   Not exactly how amazing.
+[00:55:59.960 --> 00:56:03.480]   Either my prompts are really bad or LLMs are in that grid.
+[00:56:03.480 --> 00:56:04.120]   One of the two.
+[00:56:04.120 --> 00:56:06.720]   But they're not exactly where you want it to be.
+[00:56:06.720 --> 00:56:08.920]   But in terms of the improvements that we're seeing and some
+[00:56:08.920 --> 00:56:11.480]   aspects that you mentioned, like focusing more on chat
+[00:56:11.480 --> 00:56:13.640]   than autocompletion, there is an aspect
+[00:56:13.640 --> 00:56:16.400]   of your foundational capabilities
+[00:56:16.400 --> 00:56:18.120]   are just improving by so much.
+[00:56:18.120 --> 00:56:19.760]   And there's a step function improvement
+[00:56:19.760 --> 00:56:22.400]   with every new foundational model.
+[00:56:22.400 --> 00:56:26.800]   And on top of that, now you're differentiating with features.
+[00:56:26.800 --> 00:56:29.920]   Because models, in a way, are commoditized to an extent.
+[00:56:29.920 --> 00:56:32.160]   Everyone has access to it over an API.
+[00:56:32.160 --> 00:56:36.360]   So then how do you leverage that model becomes a differentiator?
+[00:56:36.360 --> 00:56:40.080]   So it goes back to regular product building fundamentals.
+[00:56:40.080 --> 00:56:41.760]   How easy it is to use.
+[00:56:41.760 --> 00:56:44.000]   Are you providing the right things at the right time
+[00:56:44.000 --> 00:56:46.520]   to the user when they need it?
+[00:56:46.520 --> 00:56:49.720]   So a lot of the improvements that we see today,
+[00:56:49.720 --> 00:56:52.480]   apart from the models, what else do you
+[00:56:52.480 --> 00:56:53.680]   think plays a role right now?
+[00:56:53.680 --> 00:56:58.600]   And how do you envision this would be better?
+[00:56:58.600 --> 00:57:01.680]   I'm really glad you asked that.
+[00:57:01.680 --> 00:57:04.400]   I almost could have prompted you to ask this.
+[00:57:04.400 --> 00:57:06.800]   So I think that the piece that I'm most interested in--
+[00:57:06.800 --> 00:57:08.160]   because obviously, the models are
+[00:57:08.160 --> 00:57:10.000]   going to continue getting better and better.
+[00:57:10.000 --> 00:57:11.880]   And the tools are all going to continue
+[00:57:11.880 --> 00:57:14.680]   sort of like copying each other and converging,
+[00:57:14.680 --> 00:57:17.240]   and tools will do, right?
+[00:57:17.240 --> 00:57:19.680]   So the piece that I think that's really critical,
+[00:57:19.680 --> 00:57:22.040]   that's missing, that everybody needs really desperately
+[00:57:22.040 --> 00:57:24.360]   and they're asking us for-- and we're making good progress--
+[00:57:24.360 --> 00:57:26.800]   is the platform.
+[00:57:26.800 --> 00:57:29.480]   You knew I was going to be the platform at some point.
+[00:57:29.480 --> 00:57:32.920]   And so to me, the real value in CODI
+[00:57:32.920 --> 00:57:35.320]   is that we are building it as a platform.
+[00:57:35.320 --> 00:57:38.960]   I mean, the internals, the guts are very platformy.
+[00:57:38.960 --> 00:57:40.440]   And so we've got a command line tool
+[00:57:40.440 --> 00:57:43.080]   you can use to integrate with your workflows.
+[00:57:43.080 --> 00:57:47.280]   And we've got sort of like a set of curated platform APIs
+[00:57:47.280 --> 00:57:49.440]   for connecting clients, but also for connecting
+[00:57:49.440 --> 00:57:50.640]   your own context.
+[00:57:50.640 --> 00:57:53.240]   We've got an open context protocol.
+[00:57:53.240 --> 00:57:55.760]   And there's so many surfaces, right?
+[00:57:55.760 --> 00:57:58.960]   Because you've got to bring in all of your personal context,
+[00:57:58.960 --> 00:58:02.080]   your wikis, your private code, whatever.
+[00:58:02.080 --> 00:58:04.080]   You may have your own personal model.
+[00:58:04.080 --> 00:58:07.320]   So CODI also becomes a clearinghouse for you to mix
+[00:58:07.320 --> 00:58:09.120]   and match what you want.
+[00:58:09.120 --> 00:58:11.440]   Because we've got users and customers
+[00:58:11.440 --> 00:58:13.640]   that really love one particular model or another,
+[00:58:13.640 --> 00:58:14.840]   for whatever reason.
+[00:58:14.840 --> 00:58:16.480]   And a lot of coding assistants, they're
+[00:58:16.480 --> 00:58:18.080]   pretty much a bundled deal.
+[00:58:18.080 --> 00:58:19.880]   You don't have to think, and it's great.
+[00:58:19.880 --> 00:58:22.560]   They give you a model, and that's the model you get.
+[00:58:22.560 --> 00:58:25.000]   And for people who just want to just start going,
+[00:58:25.000 --> 00:58:25.560]   they're great.
+[00:58:25.560 --> 00:58:26.560]   They're fine.
+[00:58:26.560 --> 00:58:28.440]   But if you want a little bit of control over it,
+[00:58:28.440 --> 00:58:30.520]   if you're the kind of person that builds your own PC,
+[00:58:30.520 --> 00:58:33.680]   you want to build your own tools, your own personal--
+[00:58:33.680 --> 00:58:36.480]   if you're the kind of person that has a bin directory with scripts
+[00:58:36.480 --> 00:58:39.280]   in it, and you like to tinker with your tools
+[00:58:39.280 --> 00:58:42.160]   to make yourself even faster, then I
+[00:58:42.160 --> 00:58:43.600]   think you're really going to like CODI,
+[00:58:43.600 --> 00:58:46.560]   because we're building it for that kind of user.
+[00:58:46.560 --> 00:58:48.920]   It's actually a necessity, because enterprises
+[00:58:48.920 --> 00:58:51.120]   have such WAC requirements, right?
+[00:58:51.120 --> 00:58:53.360]   So you kind of have to build it as a platform.
+[00:58:53.360 --> 00:58:55.200]   What are some of the use cases, do you
+[00:58:55.200 --> 00:58:57.760]   see, that could be built on top of the platform
+[00:58:57.760 --> 00:59:00.520]   that are probably not as obvious to many people?
+[00:59:00.520 --> 00:59:08.520]   Well, I mean, that's a good question.
+[00:59:08.520 --> 00:59:12.880]   I mean, some of them are kind of-- feel like science fiction,
+[00:59:12.880 --> 00:59:14.600]   but I'm sure we're going to get there anyway.
+[00:59:14.600 --> 00:59:15.360]   Oh, sure.
+[00:59:15.360 --> 00:59:18.600]   All of this was science fiction three years ago.
+[00:59:18.600 --> 00:59:20.440]   Right, yeah, right.
+[00:59:20.440 --> 00:59:23.120]   I think the holy grail is batch, right?
+[00:59:23.120 --> 00:59:25.320]   You've got to be able to basically run the LLM.
+[00:59:25.320 --> 00:59:27.160]   You've got to be able to drag the LLM's nose
+[00:59:27.160 --> 00:59:28.480]   through all of your code.
+[00:59:28.480 --> 00:59:30.640]   Yes.
+[00:59:30.640 --> 00:59:33.160]   And right, so what we do now is we
+[00:59:33.160 --> 00:59:36.080]   do it at entry in ingress and ingress, right?
+[00:59:36.080 --> 00:59:38.600]   OK, a PR just came in, have the LLM look at it,
+[00:59:38.600 --> 00:59:42.160]   and see if you can do the linting or whatever else.
+[00:59:42.160 --> 00:59:44.120]   And it's great, so that when codes--
+[00:59:44.120 --> 00:59:46.200]   and you stopped the bleeding, basically,
+[00:59:46.200 --> 00:59:47.400]   codes that are in your code.
+[00:59:47.400 --> 00:59:49.560]   But what about all that existing code, right?
+[00:59:49.560 --> 00:59:51.920]   That's the holy grail.
+[00:59:51.920 --> 00:59:54.840]   Our product, we have a really cool batch engine.
+[00:59:54.840 --> 00:59:56.960]   It's similar to one that Google built internally
+[00:59:56.960 --> 00:59:58.800]   that Google really should have open sourced.
+[00:59:58.800 --> 01:00:01.520]   It's called Rosy, but they didn't because they never do.
+[01:00:01.520 --> 01:00:06.360]   And it's pretty cool to be able to know everybody
+[01:00:06.360 --> 01:00:09.840]   that you're about to break, at least in the open source world,
+[01:00:09.840 --> 01:00:12.560]   and be able to even go and refactor them and send them
+[01:00:12.560 --> 01:00:14.560]   a pull request saying, I'm about to break you,
+[01:00:14.560 --> 01:00:16.880]   but if you accept this PR, you'll see that it fixes you.
+[01:00:16.880 --> 01:00:19.600]   That's nuts, OK, being able to do that.
+[01:00:19.600 --> 01:00:22.040]   Now imagine being able to do that with coding.
+[01:00:22.040 --> 01:00:24.480]   Imagine being able to do that with AI, right?
+[01:00:24.480 --> 01:00:27.000]   Because now, I mean, it can do--
+[01:00:27.000 --> 01:00:28.720]   I mean, these things can be a remarkable thing.
+[01:00:28.720 --> 01:00:30.480]   You can basically give it high-level instructions
+[01:00:30.480 --> 01:00:32.400]   for a file, and it'll go ahead and port it,
+[01:00:32.400 --> 01:00:34.280]   or whatever it is that you need to do.
+[01:00:34.280 --> 01:00:36.520]   So yeah, that's the holy grail.
+[01:00:36.520 --> 01:00:37.520]   When do we get there?
+[01:00:37.520 --> 01:00:38.360]   I don't know.
+[01:00:38.360 --> 01:00:39.480]   I don't know.
+[01:00:39.480 --> 01:00:40.640]   There's so much to focus.
+[01:00:40.640 --> 01:00:44.480]   It's like, oh, gee, you've got to pick where to turn that dial.
+[01:00:44.480 --> 01:00:47.680]   We've got people chasing the AI side, because that's important.
+[01:00:47.680 --> 01:00:48.960]   We've got people in the context.
+[01:00:48.960 --> 01:00:51.840]   We've got people making the clients really, really slick
+[01:00:51.840 --> 01:00:52.720]   and good.
+[01:00:52.720 --> 01:00:55.680]   And we've got people working on the mixing and matching
+[01:00:55.680 --> 01:01:00.440]   of services and models in the back end.
+[01:01:00.440 --> 01:01:01.640]   We're spread thin.
+[01:01:01.640 --> 01:01:02.680]   Everybody's spread thin.
+[01:01:02.680 --> 01:01:04.880]   And we just hope that we're making choices
+[01:01:04.880 --> 01:01:08.160]   that are going to make the most people the happiest.
+[01:01:08.160 --> 01:01:10.640]   That's where it is right now.
+[01:01:10.640 --> 01:01:13.120]   So one of the aspects you mentioned,
+[01:01:13.120 --> 01:01:15.920]   the holy grail of being the batch--
+[01:01:15.920 --> 01:01:20.720]   today, if you think about LLMs, or many of these coding
+[01:01:20.720 --> 01:01:23.240]   assistants, they're essentially assistants.
+[01:01:23.240 --> 01:01:26.000]   And I think you said it well, they're safer in the hands
+[01:01:26.000 --> 01:01:27.040]   of a senior engineer.
+[01:01:27.040 --> 01:01:33.040]   I was probably going to go where you just already prompted it.
+[01:01:33.040 --> 01:01:34.720]   It's like, you don't know when it comes.
+[01:01:34.720 --> 01:01:36.440]   But the thing that I was thinking about
+[01:01:36.440 --> 01:01:40.200]   is it would be really nice to have not a coding assistant,
+[01:01:40.200 --> 01:01:44.720]   but a coding partner of sorts, where
+[01:01:44.720 --> 01:01:50.040]   it works on your instructions, but you trust its output
+[01:01:50.040 --> 01:01:52.520]   as if you were of a senior engineer.
+[01:01:52.520 --> 01:01:54.680]   So the part about that you said on the legacy code,
+[01:01:54.680 --> 01:01:56.840]   or the existing code base, and I think
+[01:01:56.840 --> 01:01:59.160]   that's where a lot of value lies too.
+[01:01:59.160 --> 01:02:01.480]   And I would say majority of the organizations
+[01:02:01.480 --> 01:02:02.600]   struggle there.
+[01:02:02.600 --> 01:02:05.760]   We know there's a lot of code which is dead in many cases.
+[01:02:05.760 --> 01:02:07.040]   No one goes and cleans it up.
+[01:02:07.040 --> 01:02:08.800]   Sometimes you want to do a big refactor,
+[01:02:08.800 --> 01:02:10.720]   and just updating libraries of all the clients
+[01:02:10.720 --> 01:02:13.320]   is extremely painful in a large code base.
+[01:02:13.320 --> 01:02:18.000]   Being able to do such operations which require chain of thought,
+[01:02:18.000 --> 01:02:21.280]   breaking tasks down into pieces, but then executing
+[01:02:21.280 --> 01:02:23.920]   or hours or days sometimes.
+[01:02:23.920 --> 01:02:29.200]   Is this a direction where coding assistants would eventually
+[01:02:29.200 --> 01:02:32.600]   go on your perspective?
+[01:02:32.600 --> 01:02:38.160]   I mean, your whole question was tainted with the T word.
+[01:02:38.160 --> 01:02:39.800]   You said trust.
+[01:02:39.800 --> 01:02:41.960]   You know trust, right?
+[01:02:41.960 --> 01:02:45.040]   And so when that happens, because it will happen,
+[01:02:45.040 --> 01:02:47.560]   somebody's going to have to go through every single step of it
+[01:02:47.560 --> 01:02:49.600]   and validate it, right?
+[01:02:49.600 --> 01:02:53.120]   We're going to be very-- was it Lenin, trust with verify?
+[01:02:53.120 --> 01:02:54.000]   Or was it Khrushchev?
+[01:02:54.000 --> 01:02:54.600]   I don't know.
+[01:02:54.600 --> 01:02:55.200]   I don't know.
+[01:02:55.200 --> 01:02:58.680]   So that's where we're at, right?
+[01:02:58.680 --> 01:03:00.440]   Don't trust and verify.
+[01:03:00.440 --> 01:03:01.440]   That's right.
+[01:03:01.440 --> 01:03:02.680]   Very good, very good.
+[01:03:02.680 --> 01:03:05.240]   Trust but verify.
+[01:03:05.240 --> 01:03:10.280]   So yeah, that validation, it happens in the small.
+[01:03:10.280 --> 01:03:12.560]   When you're doing chop, you validate it yourself.
+[01:03:12.560 --> 01:03:14.720]   Your IDE can provide you a very quick feedback loop.
+[01:03:14.720 --> 01:03:15.760]   Because you dump it in, and it goes,
+[01:03:15.760 --> 01:03:17.600]   that doesn't compile, or that API doesn't exist.
+[01:03:17.600 --> 01:03:19.760]   And you're like, no, right?
+[01:03:19.760 --> 01:03:22.560]   But there's larger feedback loops, larger and larger ones
+[01:03:22.560 --> 01:03:24.120]   that go all the way out to production
+[01:03:24.120 --> 01:03:26.800]   and then come all the way back via some logs or whatever.
+[01:03:26.800 --> 01:03:29.800]   And those things, they're going to get looked at by models,
+[01:03:29.800 --> 01:03:32.080]   and models that are trying to do those kinds of things,
+[01:03:32.080 --> 01:03:32.880]   workflows.
+[01:03:32.880 --> 01:03:35.040]   And it's going to be just like chop
+[01:03:35.040 --> 01:03:37.920]   is right now, which I wish more of you were doing it,
+[01:03:37.920 --> 01:03:39.040]   and I'm doing some videos.
+[01:03:39.040 --> 01:03:43.000]   But basically, it is an assistant.
+[01:03:43.000 --> 01:03:45.000]   And you're still doing the work, and you
+[01:03:45.000 --> 01:03:47.480]   need to make sure you're the--
+[01:03:47.480 --> 01:03:51.800]   look, if you build guitars or cars or whatever in your garage,
+[01:03:51.800 --> 01:03:54.680]   you can bring in assistants, and you can train them up.
+[01:03:54.680 --> 01:03:56.600]   But ultimately, it's your guitar.
+[01:03:56.600 --> 01:03:58.040]   It's your car.
+[01:03:58.040 --> 01:04:00.360]   You've got to make sure that the right things happen.
+[01:04:00.360 --> 01:04:02.680]   And assistants drop stuff.
+[01:04:02.680 --> 01:04:04.840]   So I would never get out of that mindset.
+[01:04:04.840 --> 01:04:06.000]   I know you want a part.
+[01:04:06.000 --> 01:04:08.360]   I know you want someone you can trust.
+[01:04:08.360 --> 01:04:10.040]   You're not going to get it.
+[01:04:10.040 --> 01:04:12.960]   Settle for an assistant for now.
+[01:04:12.960 --> 01:04:15.840]   Hopefully, keep my job in a way.
+[01:04:15.840 --> 01:04:17.520]   Well, it is job security, absolutely.
+[01:04:17.520 --> 01:04:18.320]   And you know what?
+[01:04:18.320 --> 01:04:20.840]   Despite the doom and gloom nature of it,
+[01:04:20.840 --> 01:04:23.520]   obviously, I had a provocative title in my blog.
+[01:04:23.520 --> 01:04:27.520]   But you can do that validation yourself as a junior engineer.
+[01:04:27.520 --> 01:04:30.280]   Because it'll spit out a bunch of stuff, and it seems plausible.
+[01:04:30.280 --> 01:04:33.720]   But you can use other tools, like other LLMs or compilers
+[01:04:33.720 --> 01:04:36.400]   or whatever, to go in and do the valid tests,
+[01:04:36.400 --> 01:04:37.800]   to do the validation you need to see.
+[01:04:37.800 --> 01:04:39.000]   Yeah, it did work.
+[01:04:39.000 --> 01:04:40.720]   Now, you're going to miss things.
+[01:04:40.720 --> 01:04:43.080]   Probably, it's inefficient or whatever.
+[01:04:43.080 --> 01:04:45.200]   Something that it did that it didn't need to,
+[01:04:45.200 --> 01:04:47.040]   if you're a junior engineer.
+[01:04:47.040 --> 01:04:50.200]   But if it meets the basic spec, right?
+[01:04:50.200 --> 01:04:52.360]   So I mean, I don't think it's all doom and gloom
+[01:04:52.360 --> 01:04:53.840]   for junior engineers at all.
+[01:04:53.840 --> 01:04:56.240]   They're just going to have to get really, really good
+[01:04:56.240 --> 01:04:58.320]   at validating.
+[01:04:58.320 --> 01:05:00.280]   And you're saying eventually you would have models
+[01:05:00.280 --> 01:05:02.240]   which would also help you validate.
+[01:05:02.240 --> 01:05:04.200]   So keep feeding.
+[01:05:04.200 --> 01:05:04.680]   Yeah.
+[01:05:04.680 --> 01:05:08.320]   Basically, it makes you pipe from one end to the other.
+[01:05:08.320 --> 01:05:11.160]   I mean, as soon as you start doing a set of validations
+[01:05:11.160 --> 01:05:14.800]   that's the same every time, then you need to train them.
+[01:05:14.800 --> 01:05:17.360]   You need to embed that whole thing, right?
+[01:05:17.360 --> 01:05:19.840]   Train a model that knows how to do that.
+[01:05:19.840 --> 01:05:22.200]   So CHOP is definitely a useful skill,
+[01:05:22.200 --> 01:05:23.600]   and not everyone is doing it.
+[01:05:23.600 --> 01:05:28.480]   And even the people who are, some are better than others.
+[01:05:28.480 --> 01:05:31.280]   Do you value it for this in interviews anymore?
+[01:05:31.280 --> 01:05:32.840]   Or at all, not anymore?
+[01:05:32.840 --> 01:05:33.680]   Oh my goodness.
+[01:05:33.680 --> 01:05:35.760]   No, we haven't started asking it as an interview.
+[01:05:35.760 --> 01:05:37.240]   It's too new, right?
+[01:05:37.240 --> 01:05:40.160]   That's interesting.
+[01:05:40.160 --> 01:05:44.960]   And fundamentally, we would still be asking people--
+[01:05:44.960 --> 01:05:47.520]   that would be like asking people, can you type?
+[01:05:47.520 --> 01:05:50.560]   Like, we might ask people some prompt engineering questions,
+[01:05:50.560 --> 01:05:53.520]   just to see if they have any common sense about it, I guess.
+[01:05:53.520 --> 01:05:56.080]   But mostly, yeah, you're always still
+[01:05:56.080 --> 01:05:57.560]   focused on fundamentals, right?
+[01:05:57.560 --> 01:06:01.960]   Computer science, timeless stuff, ideally, in interviews.
+[01:06:01.960 --> 01:06:05.280]   And in terms of hiring junior developers
+[01:06:05.280 --> 01:06:07.040]   versus senior developers, this is at least
+[01:06:07.040 --> 01:06:09.480]   a shift that I see at LinkedIn.
+[01:06:09.480 --> 01:06:12.680]   And I think it's probably true across the industry
+[01:06:12.680 --> 01:06:17.560]   right now, where overall, there are fewer positions open.
+[01:06:17.560 --> 01:06:20.680]   And the ones that are are for experienced engineers.
+[01:06:20.680 --> 01:06:23.720]   And when I say experienced, I like how you described it,
+[01:06:23.720 --> 01:06:27.040]   where a person who has an idea of what needs to be done
+[01:06:27.040 --> 01:06:29.080]   has a framework of how they would do it.
+[01:06:29.080 --> 01:06:33.800]   And they can control the LLM in this case.
+[01:06:33.800 --> 01:06:37.320]   Do you see that affecting productivity of organizations
+[01:06:37.320 --> 01:06:40.160]   that you speak with?
+[01:06:40.160 --> 01:06:43.440]   You mean the shift towards more senior?
+[01:06:43.440 --> 01:06:45.360]   Yeah, I mean, sure, yeah, they're
+[01:06:45.360 --> 01:06:46.920]   getting more productive.
+[01:06:46.920 --> 01:06:49.600]   But that's short-term gains, right?
+[01:06:49.600 --> 01:06:51.520]   What long-term consequences are we
+[01:06:51.520 --> 01:06:54.960]   going to reap from not hiring enough junior engineers?
+[01:06:54.960 --> 01:06:55.880]   We become dinosaurs.
+[01:06:55.880 --> 01:06:57.800]   We tend to get a little bit short-sighted.
+[01:06:57.800 --> 01:06:59.520]   I mean, have you ever been in a company
+[01:06:59.520 --> 01:07:02.440]   where everybody there was retirement age?
+[01:07:02.440 --> 01:07:05.880]   I've been around companies like that, it happens.
+[01:07:05.880 --> 01:07:08.720]   And it's really, really difficult.
+[01:07:08.720 --> 01:07:13.360]   At that point, you've got Japan's problem, right?
+[01:07:13.360 --> 01:07:18.120]   At some point, it's kind of not reversible.
+[01:07:18.120 --> 01:07:20.800]   You've got to have young people entering into the workforce
+[01:07:20.800 --> 01:07:21.800]   and learning this stuff.
+[01:07:21.800 --> 01:07:23.800]   So continue doubling down on that
+[01:07:23.800 --> 01:07:25.320]   and hiring junior people.
+[01:07:25.320 --> 01:07:28.000]   And then just, I don't know, I think
+[01:07:28.000 --> 01:07:31.880]   we're just going to have to figure out a new workflow.
+[01:07:31.880 --> 01:07:33.520]   There's been a lot of people suggesting
+[01:07:33.520 --> 01:07:35.120]   that maybe the junior folks can think out
+[01:07:35.120 --> 01:07:38.040]   a lot of the work and the senior folks can kind of do that,
+[01:07:38.040 --> 01:07:40.280]   set them up with their betting.
+[01:07:40.280 --> 01:07:43.200]   But I haven't seen any fall into that yet.
+[01:07:43.200 --> 01:07:46.760]   Most people are just, everybody's both inside of Japan
+[01:07:46.760 --> 01:07:49.040]   and nobody's planning for the future.
+[01:07:49.040 --> 01:07:50.560]   It's just such a big race.
+[01:07:50.560 --> 01:07:53.040]   But yeah, it's a huge problem.
+[01:07:53.040 --> 01:07:55.920]   And there is this thing called Devon.
+[01:07:55.920 --> 01:07:57.560]   There's a company called Cognition.ai.
+[01:07:57.560 --> 01:07:58.760]   I'm curious.
+[01:07:58.760 --> 01:08:00.520]   If you have seen it, what's your take on it?
+[01:08:01.360 --> 01:08:02.560]   I didn't see the demo.
+[01:08:02.560 --> 01:08:04.040]   I heard people talking about it.
+[01:08:04.040 --> 01:08:09.880]   But I don't think it comes down to the T word again, trust.
+[01:08:09.880 --> 01:08:13.760]   I ain't going to trust agents until they're trustworthy,
+[01:08:13.760 --> 01:08:16.640]   not a jot before then, which means I'm not
+[01:08:16.640 --> 01:08:18.240]   going to be an early adopter of them,
+[01:08:18.240 --> 01:08:20.440]   unless they have a mode that allows
+[01:08:20.440 --> 01:08:22.440]   me to use the agent as an assistant.
+[01:08:22.440 --> 01:08:25.600]   Or it does part of the job, and then I do that.
+[01:08:25.600 --> 01:08:31.410]   tell it where it went wrong with chat and then it continues the job. If they can do that, like human
+[01:08:31.410 --> 01:08:36.450]   in the loop, you know, driving it along and steering it, then I think they'll land a lot faster and
+[01:08:36.450 --> 01:08:42.610]   people will trust them a lot faster. But my suspicion is that people are, they're chasing investor
+[01:08:42.610 --> 01:08:46.370]   dollars and so they're trying to do something that's hitting home runs and they're not going to hit
+[01:08:46.370 --> 01:08:55.890]   it. Not in the next year, 18 months, I don't think. But I've been wrong before. So similar to coding
+[01:08:55.890 --> 01:09:04.210]   assistance, there is another aspect that engineers care about, which is understanding how the existing
+[01:09:04.210 --> 01:09:10.610]   code works. And you mentioned batch in case of coding source graph. Is there a direction which
+[01:09:10.610 --> 01:09:17.490]   you're pursuing where one could ask questions of the code to understand how it works? And I recently
+[01:09:17.490 --> 01:09:21.890]   saw a demo, I forget the name, but they had this thing called which would basically generate a wiki
+[01:09:21.890 --> 01:09:27.490]   out of an open source code base. So I could just go and say how does React work or how does Kubernetes
+[01:09:27.490 --> 01:09:33.330]   work or aspects of it. Yeah, yeah. This is it. This is an idea. This is the idea I mentioned earlier
+[01:09:33.330 --> 01:09:37.890]   in the talk that one of our customers pitched to us. And they actually got it from Google via
+[01:09:37.890 --> 01:09:44.050]   another customer of Google. So this is spreading. What you're talking about is, look, it was hard
+[01:09:44.050 --> 01:09:49.650]   for me to get my head around it, but I view it as a new kind of source code index that's complementary
+[01:09:49.650 --> 01:09:56.850]   to a search index or a graph that a compiler would build or embeddings, any sort of index. They all
+[01:09:56.850 --> 01:10:04.530]   have different strengths. There is a new kind of index emerging, which is generated by LLMs and it's
+[01:10:04.530 --> 01:10:10.530]   a semantic index. And I think they're going to have incredible, they have incredible potential.
+[01:10:10.530 --> 01:10:16.210]   I know some people who are building them now, we will be looking at them for sure. I'm excited
+[01:10:16.210 --> 01:10:21.650]   about that direction. But that is that is smoking hot new. That'd be amazing, by the way, like,
+[01:10:21.650 --> 01:10:27.970]   wikis and dogs get out of date, this would be pretty neat. We spent all this customer spent a
+[01:10:27.970 --> 01:10:33.410]   whole afternoon educating me about it. Why? Because they didn't want to build it, right? They
+[01:10:33.410 --> 01:10:38.610]   want me to build it, which kind of makes sense, right? Because it's kind of lag. So, yeah, I'm
+[01:10:38.610 --> 01:10:46.370]   getting chills. This is a new direction, right? It's so weird. You're basically building this
+[01:10:46.370 --> 01:10:50.450]   document store, this semantic index that doesn't have to be human readable. It just has all the
+[01:10:50.450 --> 01:10:56.610]   semantics that are unpackable by LLMs. And then you can have business owners who can't look at
+[01:10:56.610 --> 01:11:02.050]   the code necessarily. They can be going into legacy code bases of 20 million lines of cobalt
+[01:11:02.050 --> 01:11:06.530]   or whatever that your company doesn't even understand anymore, but you're dependent on it.
+[01:11:06.530 --> 01:11:11.970]   And they can go in and actually start making like informed, not just questions, but potentially even
+[01:11:11.970 --> 01:11:17.650]   start the company could start doing refactorings now that are tractable when they weren't tractable
+[01:11:17.650 --> 01:11:22.130]   before. And trust me, I know a lot of you out there that have intractable migration problems
+[01:11:22.130 --> 01:11:27.090]   right now, trying to get your monolith split up or whatever. This is going to be a game changer for
+[01:11:27.090 --> 01:11:32.530]   that. A teeny tiny benefit of this would be developers getting less pings from their managers
+[01:11:32.530 --> 01:11:39.570]   about how does this thing work? They could just go. It is one of many benefits that this structure
+[01:11:39.570 --> 01:11:45.330]   has. And I'm just it was weird. It was it's like a discovery. You start realizing this is this is
+[01:11:45.330 --> 01:11:49.650]   this is an inevitability. Like people are all going to figure this out, you know, is use the LLM to
+[01:11:49.650 --> 01:11:55.730]   explain all the code in great detail. And then now it you know how it works in ways that you just
+[01:11:55.730 --> 01:12:02.290]   couldn't before. Now, I mean, like how to build that index is still a wide open question. What's
+[01:12:02.290 --> 01:12:06.130]   the format of the index? What's the granularity? Do you run it at the function level, the file level,
+[01:12:06.130 --> 01:12:12.530]   the module level, the graph level, you know, we'll see, right? But it's really cool that a lot of
+[01:12:12.530 --> 01:12:17.730]   people are innovating on this right now. And a lot of developments we see right now are on the
+[01:12:17.730 --> 01:12:24.050]   left side of the developer cycle in a way, which is code assistance to help them develop code or
+[01:12:25.010 --> 01:12:30.290]   this summarization in a way, or the core understanding semantics of the system and then
+[01:12:30.290 --> 01:12:36.050]   helping you understand how it works. There is this entire world of things on the right side,
+[01:12:36.050 --> 01:12:43.010]   which is when system is running in production. And you can't reason about a system, especially in the
+[01:12:43.010 --> 01:12:47.090]   service oriented architecture, where you have like 2000 things talking to each other at any time,
+[01:12:47.090 --> 01:12:51.730]   with configurations and somewhere else secret somewhere else, and they are just connected via
+[01:12:51.730 --> 01:12:57.890]   this network. Do you see any movements on that side, which would help one understand the production
+[01:12:57.890 --> 01:13:03.730]   environment better? I mean, I'm sure there's like startups and stuff doing that. But we view that
+[01:13:03.730 --> 01:13:08.930]   as a subset of the context problem. Like people companies came to us and immediately they were
+[01:13:08.930 --> 01:13:13.490]   like, oh, Cody can index all our stuff. And then we can ask questions about it. Then can we throw
+[01:13:13.490 --> 01:13:17.570]   our wiki in there? And we're like, yeah. And they're like, well, can we throw our, you know,
+[01:13:17.570 --> 01:13:21.410]   our issue tracker in there? And we're like, yeah. And all of a sudden, they want everything in there.
+[01:13:21.410 --> 01:13:25.970]   Logs and whatever, right? And so that's why I said we've been building a platform with an open
+[01:13:25.970 --> 01:13:33.250]   context that allows you very simply to basically like allow other contexts to get put into your
+[01:13:33.250 --> 01:13:37.170]   workflow. It doesn't have to be a query. It can be a CI/CD workflow that you're building, right?
+[01:13:37.170 --> 01:13:41.010]   Those platforms are, I mean, there's actually going to be huge.
+[01:13:41.010 --> 01:13:46.050]   Okay. Completely missed then what you meant by platform, because this is fascinating.
+[01:13:46.850 --> 01:13:53.250]   So essentially, Cody's while the way you interact with it is through the coding assistant interface
+[01:13:53.250 --> 01:13:58.370]   and the chat interface in your IDE. But the context it has is beyond just the code in the repo.
+[01:13:58.370 --> 01:14:04.850]   So you're saying it is, it is, it's, it's, it's negotiating. You can mention URLs and stuff. So
+[01:14:04.850 --> 01:14:10.050]   you can slurp down, you know, now in Cody, right? You know, it's actually quite, it's funny. It's
+[01:14:10.050 --> 01:14:14.930]   not the way we thought it was going to go. And our AI people are a little bit indignant, just a little
+[01:14:14.930 --> 01:14:21.010]   bit, right? Because they're like, well, technically, you shouldn't have to figure this out. The model
+[01:14:21.010 --> 01:14:24.930]   shouldn't be able to figure this out. And I'm like, well, there's your operative word should,
+[01:14:24.930 --> 01:14:29.330]   all right? So why don't we just go ahead and work with reality, which is that we're going to work,
+[01:14:29.330 --> 01:14:33.970]   we need control over the context. We need to be able to sling it around like gunslingers. I mean,
+[01:14:33.970 --> 01:14:39.490]   slice it, dice it, prune it, go back and rewrite it, edit history. Your conversation becomes the
+[01:14:39.490 --> 01:14:45.730]   dynamic context, right? That's going to help you solve your problem, whatever it is. And so, yeah,
+[01:14:45.730 --> 01:14:50.770]   you need full editing ability to go back and rewrite that thing, you know? And we, we decided
+[01:14:50.770 --> 01:14:56.210]   to go down that path with our AI people kind of running after us to try to, you know, model it,
+[01:14:56.210 --> 01:15:00.690]   right? And that's given us just tremendous flexibility. That's what I mean by platform.
+[01:15:00.690 --> 01:15:07.410]   We can integrate on many different surfaces. We can integrate on the model, the backend.
+[01:15:07.410 --> 01:15:12.450]   We can integrate your context. We can integrate like at the repo level or like with your particular
+[01:15:12.450 --> 01:15:18.530]   tools. That's a lot of work, right? It's like three times as much work to build that way. Right?
+[01:15:18.530 --> 01:15:25.970]   Because then, then people can build stuff like what we just talked about, like that magical
+[01:15:25.970 --> 01:15:32.130]   document store, you know, and integrate it into your tools. And this is why I'm telling people that
+[01:15:32.130 --> 01:15:37.730]   the growth is exponential. That it's only been, what, 18 months since GPT three five came out,
+[01:15:37.730 --> 01:15:43.410]   you know, or whatever, three GPT four. And, and, and that's kind of garbage compared to what we
+[01:15:43.410 --> 01:15:49.010]   have today. The next 18 months isn't going to be, you know, like as much as happened before,
+[01:15:49.010 --> 01:15:52.690]   it's going to be significantly more than happened in the last 18 months because we're growing
+[01:15:52.690 --> 01:15:58.370]   exponentially. So it's a little bit dizzying, actually. Man, is it exciting. Now, do you see
+[01:15:58.370 --> 01:16:04.610]   where I'm saying this time of my life? Seriously. I think everybody should jump. They should,
+[01:16:04.610 --> 01:16:11.330]   they should be jumping on this. So you mentioned earlier that while building Cody and also using
+[01:16:11.330 --> 01:16:16.050]   Cody, it has surprised you in ways where it acted in a way you didn't anticipate it to act that way.
+[01:16:16.050 --> 01:16:22.530]   Are there any specific instances that you can recall where it surprised you? Yeah. I mean,
+[01:16:22.530 --> 01:16:26.690]   just sometimes it just has no, you feel like it has no business knowing what it,
+[01:16:26.690 --> 01:16:31.170]   what it figured out, right? And this, this happens a lot, especially because Cody does a lot of
+[01:16:31.170 --> 01:16:35.010]   magical context fetching for you. You can see it, you can open it up and look at which ones it
+[01:16:35.010 --> 01:16:39.490]   picked, right? It'll, it'll rank them. It pulls some out of the embed. It'll embed your query and
+[01:16:39.490 --> 01:16:43.570]   see if it can come up with some relevant stuff that way. And it'll do a search and check our
+[01:16:43.570 --> 01:16:48.770]   graph and so on. And those, sometimes that context is completely irrelevant. We need to work on it.
+[01:16:48.770 --> 01:16:54.530]   And sometimes it's so relevant that even with like it's incomplete and you look at it and you're
+[01:16:54.530 --> 01:16:59.330]   like, actually even like a senior engineer probably shouldn't have been able to figure that out. And
+[01:16:59.330 --> 01:17:05.970]   yet here the LN generated the right code. Maybe it's just really good at guessing, right? But
+[01:17:05.970 --> 01:17:10.450]   I mean, in the end, you know, if it's doing the right thing, you know, I'm still regularly blown
+[01:17:10.450 --> 01:17:14.930]   away by these things. So I don't really add products. So this question might be a dumb question,
+[01:17:14.930 --> 01:17:21.570]   but I was just trying to visualize in my head in terms of how this thing functions,
+[01:17:22.770 --> 01:17:25.810]   makes it, visualizing things makes it easier for me to understand stuff.
+[01:17:25.810 --> 01:17:31.970]   So you have this model in one place, which is the core LLM, call it GPT-40, cloud 3.5,
+[01:17:31.970 --> 01:17:38.850]   so on or something else. You have Cody in the front, and then context you said is where the
+[01:17:38.850 --> 01:17:45.730]   magic happens, or that's the differentiator. Cody can pull context from different places.
+[01:17:47.090 --> 01:17:53.570]   Now, context here, tell us a little more about what that looks like. So I'm just imagining in one
+[01:17:53.570 --> 01:17:59.410]   case, you have all of your source code. In one case, you have your wikis. And this is something
+[01:17:59.410 --> 01:18:04.210]   I see when I just search on Sourcegraph. By the way, Sourcegraph search is outstanding. That's
+[01:18:04.210 --> 01:18:12.530]   my go-to place to search code. I've recommended to most of my teammates I work with. Anyway,
+[01:18:12.530 --> 01:18:18.770]   so in that case, it says something like search based, it'll actually show that tag.
+[01:18:18.770 --> 01:18:25.170]   But in terms of fetching this context, can you elaborate a little more on what that looks like?
+[01:18:25.170 --> 01:18:35.330]   Yeah, I mean, it's not a one size fits all problem, right? It's domain specific. So if
+[01:18:35.330 --> 01:18:41.650]   you're generating unit tests, your context is going to be your company's testing style guide,
+[01:18:41.650 --> 01:18:47.650]   whatever framework classes you're using, maybe some examples of tests that are particularly
+[01:18:47.650 --> 01:18:52.210]   representative of how you want them to be written in your organization. So we actually allow for
+[01:18:52.210 --> 01:18:57.010]   things like this by allowing you to put in pinned context, and having administrators actually point
+[01:18:57.010 --> 01:19:03.250]   in context that everybody's going to be using all the time for specific use cases. You can do custom
+[01:19:03.250 --> 01:19:07.730]   prompts, basically, and build up a prompt library, because the prompt can help bring in some of the
+[01:19:07.730 --> 01:19:12.930]   context as well or interpret it. And then it's going to be a completely different set of context
+[01:19:12.930 --> 01:19:16.690]   for the use case that you brought up in your earlier question about how do you debug in
+[01:19:16.690 --> 01:19:21.890]   production, right? And the answer is the LLM can use tools, and it can read and interpret the
+[01:19:21.890 --> 01:19:29.650]   output of tools. And so, you know, our context there is can we get a what information can we get
+[01:19:29.650 --> 01:19:34.210]   out of prod that we can get in front of the LLM. And since they're multimodal, maybe that's as
+[01:19:34.210 --> 01:19:40.370]   desperate as doing a screenshot. But hey, right, that may work too. So context can be can be
+[01:19:40.370 --> 01:19:46.690]   anything. Context is context. It's literally like, it's it is defining the problem. And that's what
+[01:19:46.690 --> 01:19:50.930]   it's the most fundamental thing. So in the RAG part of this equation, this is the retrieval part.
+[01:19:50.930 --> 01:19:58.930]   And how much of the classical search techniques apply to this part? Or is this part also very
+[01:19:58.930 --> 01:20:03.250]   different nowadays? It's very similar, actually, like if you think about Google search, right,
+[01:20:03.250 --> 01:20:07.970]   it's not one back end, it's not one size fits all just like this AI domain, right? If you're
+[01:20:07.970 --> 01:20:13.490]   searching for baseball cards, there's going to be a very specific set of things in your query that
+[01:20:13.490 --> 01:20:18.050]   are very different from if you're searching for a pet store. And so there's going to be a bunch of
+[01:20:18.050 --> 01:20:24.450]   back ends, you know, hundreds or even thousands of models that all report back on what they think the
+[01:20:24.450 --> 01:20:29.970]   relevant answer context for your query is search results, say, and then somebody has to go and
+[01:20:29.970 --> 01:20:36.290]   arbitrate, right, those those those answers and multiplex them. And that's, that's where some of
+[01:20:36.290 --> 01:20:42.050]   our key differentiation is, is we're not just a context fetching engine, we're a context assembly
+[01:20:42.050 --> 01:20:47.170]   engine. And that there's, there's a lot of there's an art to that as well, right, because it's it's a
+[01:20:47.170 --> 01:20:57.250]   bin packing problem. So for someone who has some knowledge or experience with information retrieval
+[01:20:57.250 --> 01:21:03.410]   systems, or search in general, I can see them transitioning into the space relatively easily.
+[01:21:03.410 --> 01:21:09.010]   What are some of the other transferable skills in terms of software engineering to just building
+[01:21:09.010 --> 01:21:16.290]   AI products? Typing, right, because if you're doing channel rated programming, that means you
+[01:21:16.290 --> 01:21:20.770]   got to like chat. And and so if you're really a slow typist, you're going to be frustrated,
+[01:21:20.770 --> 01:21:25.890]   you're going to be the bottleneck, right? Although it would be great, you know, if we could, I think,
+[01:21:25.890 --> 01:21:31.490]   I think this is it's finally time for, you know, speech to text to really shine. We need to get
+[01:21:31.490 --> 01:21:36.370]   it wired up so that you can talk and type and whatever at the same time. That was slightly
+[01:21:36.370 --> 01:21:41.890]   tongue in cheek, I get it. But you know, but yeah, in terms of software engineering, I would say,
+[01:21:41.890 --> 01:21:50.610]   look, the skills are the same. But for my entire career, the low level skills have been becoming
+[01:21:50.610 --> 01:21:57.970]   obsolete one after another as we level up. Okay, so when I started, you know, in college, like,
+[01:21:57.970 --> 01:22:02.370]   we were literally like using put pixel, like to put a colored pixel on the screen, and we would
+[01:22:02.370 --> 01:22:07.570]   use our own Z buffering and whatever to build 3D graphics. And by the time I graduated from college,
+[01:22:07.570 --> 01:22:12.530]   it had already gotten to animation courses, it was accelerating that fast, right? And at some point,
+[01:22:12.530 --> 01:22:17.730]   we didn't need to know how to render polygons and do Bresenham's algorithm anymore, right? And
+[01:22:17.730 --> 01:22:22.690]   because it's down in the hardware, and this steady march of pushing software down into the hardware
+[01:22:22.690 --> 01:22:27.250]   layer over and over again, has meant that we've been focusing on higher and higher and higher
+[01:22:27.250 --> 01:22:31.570]   level things. There are still computer sciencey things. And there's still things you still have
+[01:22:31.570 --> 01:22:36.770]   to understand algorithms and data structures and big O complexity and all that you have to, right?
+[01:22:36.770 --> 01:22:42.930]   But the specifics of technologies that that, you know, are staples like, I don't know, do you need
+[01:22:42.930 --> 01:22:49.490]   to know relational databases anymore? Maybe not for long. If LLMs know everything about relational
+[01:22:49.490 --> 01:22:53.730]   databases, and all you need to do is tell them what you need, right? You know, you're gonna need
+[01:22:53.730 --> 01:23:00.210]   somebody to go in and fix it one person on staff. Again, this is the problem, right? But yeah.
+[01:23:00.210 --> 01:23:07.490]   So we're coming towards the end of our conversation. And so in one of your YouTube posts,
+[01:23:08.130 --> 01:23:13.490]   you mentioned that having something to truly push up a mountain is fulfilling. We like struggle,
+[01:23:13.490 --> 01:23:21.010]   and struggle is necessary for life. You've had a very successful career. Over this period,
+[01:23:21.010 --> 01:23:25.250]   what have been some of the struggles that you are the proud most proud of?
+[01:23:25.250 --> 01:23:28.370]   The man most proud of?
+[01:23:28.370 --> 01:23:36.450]   Which have been most fulfilling in a way. Yeah, I mean, like, I guess one that I would love to
+[01:23:36.450 --> 01:23:45.090]   do is almost like a PSA is your mental health is really, really an important resource that I think
+[01:23:45.090 --> 01:23:53.010]   that maybe like, some Gen X, and we don't talk about that stuff ever. Okay, it's like, you know,
+[01:23:53.010 --> 01:23:57.810]   yeah, you see the football game? Yeah, that's as close as we ever get to talking about mental
+[01:23:57.810 --> 01:24:02.530]   health and sharing in my generation. All right. But I learned the hard way like wrestling with
+[01:24:02.530 --> 01:24:07.890]   the innovators dilemma, you know, head on, very, very difficult problem. You know, my mental health
+[01:24:07.890 --> 01:24:14.530]   really, really took a hit, you know, and I learned how important it is. And that was a huge struggle,
+[01:24:14.530 --> 01:24:19.090]   a huge struggle, right, to get better, you know what I mean, like, and get back to my jolly old
+[01:24:19.090 --> 01:24:24.690]   self, you know, it was not an easy thing. And so I just want I want people, especially the older
+[01:24:24.690 --> 01:24:29.170]   programmers, you know, to recognize that, yeah, stuff can get so hard that you need to go get help.
+[01:24:30.850 --> 01:24:35.010]   So there's a struggle I'm proud of telling you about. Does that count?
+[01:24:35.010 --> 01:24:41.170]   That totally counts. It totally counts. Steve, this has been an amazing conversation. We highly
+[01:24:41.170 --> 01:24:46.690]   encourage people to check out all of your blog posts, we'll link to them in the show notes. And
+[01:24:46.690 --> 01:24:52.050]   we learned a lot through this conversation. And I'm sure all of our listeners will too,
+[01:24:52.050 --> 01:24:56.210]   not only learn, they'll find it entertaining. So thank you so much again for joining the show.
+[01:24:57.250 --> 01:25:01.090]   Well, thank you so much for having me. Thank you, Steve. Awesome. All right, guys.
+[01:25:01.090 --> 01:25:11.970]   Hey, thank you so much for listening to the show. You can subscribe wherever you get your podcasts
+[01:25:11.970 --> 01:25:18.530]   and learn more about us at software misadventures.com. You can also write to us at hello at
+[01:25:18.530 --> 01:25:31.250]   software misadventures.com. We would love to hear from you. Until next time, take care.
+

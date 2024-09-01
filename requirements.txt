@@ -1,0 +1,8 @@
+requests
+fake-useragent
+pydub
+pytest
+google-generativeai
+instructor
+ipython
+fastapi
