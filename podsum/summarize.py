@@ -1,9 +1,11 @@
 from pathlib import Path
-from typing import List, Optional
+from typing import List
 
 import google.generativeai as genai
 import instructor
-from pydantic import BaseModel, Field
+
+from podsum.constants import DL_DIR
+from podsum.schemas import Segment
 
 gem_client = instructor.from_gemini(
     client=genai.GenerativeModel(
@@ -11,13 +13,6 @@ gem_client = instructor.from_gemini(
     ),
     mode=instructor.Mode.GEMINI_JSON,
 )
-
-
-class Segment(BaseModel):
-    segment_title: str = Field(description="Segment title in a short sentence")
-    description: str
-    direct_quote: str
-    timestamp: str = Field(description="The starting timestamp in the format HH:MM:SS")
 
 
 def summarize(transcript: str):
@@ -45,7 +40,11 @@ def summarize(transcript: str):
     return segments
 
 
-def summarize_on_transcript(fp: Path):
+def summarize_on_transcript(episode_internal_id: str, dl_dir=Path(DL_DIR)):
+    filename = f"{episode_internal_id}.txt"
+    fp = dl_dir / filename
+
+    print(f"Summarizing podcast from file {fp}")
     with open(fp, "r") as f:
         transcript = f.readlines()
     if len(transcript) < 5:

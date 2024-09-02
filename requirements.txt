@@ -5,4 +5,4 @@ pytest
 google-generativeai
 instructor
 ipython
-fastapi
+fastapi[standard]

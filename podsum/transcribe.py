@@ -1,9 +1,12 @@
+import hashlib
 import subprocess
 from pathlib import Path
 
 import requests
 from fake_useragent import UserAgent
 from pydub import AudioSegment
+
+from podsum.constants import DL_DIR
 
 WHISPER_PATHS = {
     "exec": "/Users/guangyang/whisper.cpp/main",
@@ -14,16 +17,15 @@ WHISPER_DEFAULT_SR = 16000
 
 def transcribe_podcast_from_url(
     url: str,
-    episode_internal_id: str,
-    dl_dir=Path("/Users/guangyang/podcast-summarizer/data"),
+    dl_dir=Path(DL_DIR),
 ):
-    dl_sub_dir = dl_dir
-    dl_sub_dir.mkdir(parents=True, exist_ok=True)
+    episode_internal_id = hashlib.md5(url.encode("utf-8")).hexdigest()
     filename = f"{episode_internal_id}.mp3"
-    fp = dl_sub_dir / filename
+    fp = dl_dir / filename
     if fp.exists():
         print("MP3 file already exists with fp:", fp)
-        return transcribe_podcast_from_file(fp)
+        transcribe_podcast_from_file(fp)
+        return episode_internal_id
 
     ua = UserAgent()
     headers = {"User-Agent": ua.random}
@@ -37,7 +39,8 @@ def transcribe_podcast_from_url(
         with open(fp, "wb") as file:
             file.write(response.content)
         print("MP3 file downloaded successfully with fp:", fp)
-        return transcribe_podcast_from_file(fp)
+        transcribe_podcast_from_file(fp)
+        return episode_internal_id
     except requests.RequestException as e:
         raise ValueError(f"Error downloading MP3 from {url}", e)
 
@@ -91,5 +94,3 @@ def transcribe_podcast_from_file(fp: Path, whisper_paths=WHISPER_PATHS):
 
     except subprocess.CalledProcessError as e:
         raise ValueError("Error running whisper: ", e)
-
-    return transcript_fp
