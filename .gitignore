@@ -1,0 +1,4 @@
+podsum-ui/node_modules/
+podsum-ui/.next/
+public/static
+*.DS_Store

@@ -1,11 +1,20 @@
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 
-from podsum.schemas import EpisodeInternalID, PodcastURL, Segment, Test
+from podsum.schemas import EpisodeInternalID, PodcastURL, Segment
 from podsum.summarize import summarize_on_transcript
 from podsum.transcribe import transcribe_podcast_from_url
 
 app = FastAPI()
+
+# Add CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:4999"],  # Add your frontend origin
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
